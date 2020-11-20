@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<mat-toolbar>\r\n   <button mat-icon-button class=\"example-icon\" (click)=\"drawer.toggle()\" aria-label=\"Example icon-button with menu icon\">\r\n    <mat-icon>menu</mat-icon>\r\n  </button>\r\n  <span>Next Gen Viewer</span>\r\n  <span class=\"example-spacer\"></span>\r\n  <p>  </p>\r\n  <button (click)=\"openSnackBar('Saving GeoJSON to firebase', 'Dismiss')\" color=\"accent\" mat-raised-button>\r\n    Save GeoJSON\r\n  </button>\r\n  <button mat-icon-button class=\"example-icon favorite-icon\" aria-label=\"Example icon-button with heart icon\">\r\n    <mat-icon>favorite</mat-icon>\r\n  </button>\r\n  <button mat-icon-button class=\"example-icon\" aria-label=\"Example icon-button with share icon\">\r\n   <mat-icon>share</mat-icon>\r\n  </button>\r\n  <button color=\"accent\" (click)=\"showFillerREPL = !showFillerREPL\" mat-raised-button>\r\n    Toggle REPL\r\n  </button>\r\n</mat-toolbar>\r\n\r\n\r\n\r\n\r\n<mat-drawer-container class=\"example-container\" autosize>\r\n\r\n  <mat-drawer #drawer class=\"example-sidenav\" mode=\"side\">\r\n\r\n    <mat-accordion>\r\n      <button (click)=\"this.deleteDrawing()\" mat-raised-button>\r\n        <mat-icon>undo</mat-icon>\r\n      </button>\r\n      <button (click)=\"this.redoDrawing()\" mat-raised-button>\r\n        <mat-icon>redo</mat-icon>\r\n      </button><p> </p>\r\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                           (closed)=\"panelOpenState = false\">\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title>\r\n            Annotation Tools\r\n          </mat-panel-title>\r\n        </mat-expansion-panel-header>\r\n        <p> </p>\r\n        <button (click)=\"this.addInteraction('Point')\" mat-raised-button>\r\n          Point\r\n        </button><p> </p>\r\n        <button (click)=\"this.addInteraction('LineString')\" mat-raised-button>\r\n          LineString\r\n        </button><p> </p>\r\n        <button (click)=\"this.addInteraction('Polygon')\" mat-raised-button>\r\n          Polygon\r\n        </button><p> </p>\r\n        <button (click)=\"this.addInteraction('Circle')\" mat-raised-button>\r\n          Circle\r\n        </button><p> </p>\r\n        <button (click)=\"this.removeInteraction()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n            <mat-icon>clear</mat-icon>\r\n        </button><p> </p><button (click)=\"this.deleteDrawing()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n            <mat-icon>delete</mat-icon>\r\n        </button>\r\n      </mat-expansion-panel>\r\n    </mat-accordion><p> </p>\r\n    <mat-accordion>\r\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                           (closed)=\"panelOpenState = false\">\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title>\r\n            Union Difference\r\n          </mat-panel-title>\r\n        </mat-expansion-panel-header>\r\n        <button (click)=\"this.addPolygons()\" mat-raised-button>\r\n          Add Polygon\r\n        </button><p> </p>\r\n        <button (click)=\"this.erasePolygons()\" mat-raised-button>\r\n          Erase Polygon\r\n        </button><p> </p>\r\n        <button (click)=\"this.combine()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n              <mat-icon>track_changes</mat-icon>\r\n              Combine\r\n        </button>\r\n      </mat-expansion-panel>\r\n    </mat-accordion><p> </p>\r\n\r\n    <mat-accordion>\r\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                           (closed)=\"panelOpenState = false\">\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title>\r\n            Colour intensity\r\n          </mat-panel-title>\r\n        </mat-expansion-panel-header>\r\n        <button (click)=\"resetToDefault()\" color=\"primary\" mat-raised-button>\r\n          Reset to default\r\n        </button><p> </p>\r\n        Invert\r\n        <mat-slider\r\n          thumbLabel\r\n          (change)=\"this.onInvertChange($event)\"\r\n          min=\"1\"\r\n          max=\"100\"></mat-slider><p> </p>\r\n        Hue\r\n        <mat-slider\r\n          thumbLabel\r\n          (change)=\"this.onHueChange($event)\"\r\n          min=\"0\"\r\n          max=\"360\"></mat-slider><p> </p>\r\n        Saturation\r\n        <mat-slider\r\n          thumbLabel\r\n          (change)=\"this.onSaturationChange($event)\"\r\n          min=\"1\"\r\n          max=\"100\"></mat-slider><p> </p>\r\n      </mat-expansion-panel>\r\n    </mat-accordion><p> </p>\r\n\r\n\r\n    <mat-accordion>\r\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                           (closed)=\"panelOpenState = false\">\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title>\r\n            Layers\r\n          </mat-panel-title>\r\n        </mat-expansion-panel-header>\r\n        <mat-slide-toggle\r\n            color=\"primary\"\r\n            (change)=\"this.onToggle($event)\"\r\n            class=\"example-margin\"\r\n            [checked]=\"checked\"\r\n            [disabled]=\"disabled\">\r\n          GeoJSON\r\n        </mat-slide-toggle><p> </p>\r\n      </mat-expansion-panel>\r\n    </mat-accordion><p> </p>\r\n\r\n    <mat-accordion>\r\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                           (closed)=\"panelOpenState = false\">\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title>\r\n            Mouse & Keyboard Controls\r\n          </mat-panel-title>\r\n        </mat-expansion-panel-header>\r\n        <mat-tab-group animationDuration=\"0ms\">\r\n          <mat-tab label=\"Section ID\">\r\n            <br>\r\n            <mat-form-field appearance=\"standard\">\r\n              <mat-label>Brain ID</mat-label>\r\n              <input matInput placeholder=\"E.g. 4240\">\r\n            </mat-form-field>\r\n            <mat-form-field appearance=\"standard\">\r\n              <mat-label>Section No</mat-label>\r\n              <input matInput placeholder=\"E.g. 0025\">\r\n            </mat-form-field>\r\n            <br>\r\n          </mat-tab>\r\n          <mat-tab label=\"Second\">\r\n            <div class=\"example-small-box mat-elevation-z4\">\r\n              Small content\r\n            </div>\r\n          </mat-tab>\r\n        </mat-tab-group><p> </p>\r\n      </mat-expansion-panel>\r\n    </mat-accordion><p> </p>\r\n\r\n  </mat-drawer>\r\n\r\n  <div class=\"example-sidenav-content\">\r\n    <div id=\"map\" class=\"map\">\r\n    </div>\r\n    <mat-card *ngIf=\"showFillerREPL\" class=\"example-card\">\r\n      <mat-card-header>\r\n        <mat-card-title>REPL Bot</mat-card-title>\r\n        <mat-card-subtitle>Automate NGV Task using REPL Bot</mat-card-subtitle>\r\n      </mat-card-header>\r\n      <!--<img mat-card-image src=\"https://img.freepik.com/free-vector/set-cute-robot-ai-character-with-circuits-background_99413-92.jpg\" height=\"200\">-->\r\n      <mat-card-content>\r\n        <form class=\"example-form\">\r\n          <mat-form-field class=\"example-full-width\">\r\n            <input type=\"text\"\r\n                   id = \"replID\"\r\n                   placeholder=\"Command line\"\r\n                   aria-label=\"Number\"\r\n                   matInput\r\n                   [formControl]=\"myControl\"\r\n                   [matAutocomplete]=\"auto\">\r\n            <mat-autocomplete #auto=\"matAutocomplete\">\r\n              <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\r\n                {{option}}\r\n              </mat-option>\r\n            </mat-autocomplete>\r\n          </mat-form-field>\r\n        </form>\r\n        <mat-card-actions>\r\n          <button (click)=\"this.REPL()\" mat-raised-button>Submit</button>\r\n        </mat-card-actions>\r\n      </mat-card-content>\r\n\r\n    </mat-card>\r\n\r\n  </div>\r\n\r\n</mat-drawer-container>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<mat-toolbar>\n   <button mat-icon-button class=\"example-icon\" (click)=\"drawer.toggle()\" aria-label=\"Example icon-button with menu icon\">\n    <mat-icon>menu</mat-icon>\n  </button>\n  <span>Next Gen Viewer</span>\n  <span class=\"example-spacer\"></span>\n  <p>  </p>\n  <button (click)=\"openSnackBar('Saving GeoJSON to firebase', 'Dismiss')\" color=\"accent\" mat-raised-button>\n    Save GeoJSON\n  </button>\n  <button mat-icon-button class=\"example-icon favorite-icon\" aria-label=\"Example icon-button with heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button class=\"example-icon\" aria-label=\"Example icon-button with share icon\">\n   <mat-icon>share</mat-icon>\n  </button>\n  <button color=\"accent\" (click)=\"showFillerREPL = !showFillerREPL\" mat-raised-button>\n    Toggle REPL\n  </button>\n</mat-toolbar>\n\n\n\n\n<mat-drawer-container class=\"example-container\" autosize>\n\n  <mat-drawer #drawer class=\"example-sidenav\" mode=\"side\">\n\n    <mat-accordion>\n      <button (click)=\"this.deleteDrawing()\" mat-raised-button>\n        <mat-icon>undo</mat-icon>\n      </button>\n      <button (click)=\"this.redoDrawing()\" mat-raised-button>\n        <mat-icon>redo</mat-icon>\n      </button><p> </p>\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\n                           (closed)=\"panelOpenState = false\">\n        <mat-expansion-panel-header>\n          <mat-panel-title>\n            Annotation Tools\n          </mat-panel-title>\n        </mat-expansion-panel-header>\n        <p> </p>\n        <button (click)=\"this.addInteraction('Point')\" mat-raised-button>\n          Point\n        </button><p> </p>\n        <button (click)=\"this.addInteraction('LineString')\" mat-raised-button>\n          LineString\n        </button><p> </p>\n        <button (click)=\"this.addInteraction('Polygon')\" mat-raised-button>\n          Polygon\n        </button><p> </p>\n        <button (click)=\"this.addInteraction('Circle')\" mat-raised-button>\n          Circle\n        </button><p> </p>\n        <button (click)=\"this.removeInteraction()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\n            <mat-icon>clear</mat-icon>\n        </button><p> </p><button (click)=\"this.deleteDrawing()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\n            <mat-icon>delete</mat-icon>\n        </button>\n      </mat-expansion-panel>\n    </mat-accordion><p> </p>\n    <mat-accordion>\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\n                           (closed)=\"panelOpenState = false\">\n        <mat-expansion-panel-header>\n          <mat-panel-title>\n            Union Difference\n          </mat-panel-title>\n        </mat-expansion-panel-header>\n        <button (click)=\"this.addPolygons()\" mat-raised-button>\n          Add Polygon\n        </button><p> </p>\n        <button (click)=\"this.erasePolygons()\" mat-raised-button>\n          Erase Polygon\n        </button><p> </p>\n        <button (click)=\"this.combine()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\n              <mat-icon>track_changes</mat-icon>\n              Combine\n        </button>\n      </mat-expansion-panel>\n    </mat-accordion><p> </p>\n    \n    <mat-accordion>\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\n                           (closed)=\"panelOpenState = false\">\n        <mat-expansion-panel-header>\n          <mat-panel-title>\n            Colour intensity\n          </mat-panel-title>\n        </mat-expansion-panel-header>\n        <button (click)=\"resetToDefault()\" color=\"primary\" mat-raised-button>\n          Reset to default\n        </button><p> </p>\n        Invert\n        <mat-slider\n          thumbLabel\n          (change)=\"this.onInvertChange($event)\"\n          min=\"1\"\n          max=\"100\"></mat-slider><p> </p>\n        Hue\n        <mat-slider\n          thumbLabel\n          (change)=\"this.onHueChange($event)\"\n          min=\"0\"\n          max=\"360\"></mat-slider><p> </p>\n        Saturation\n        <mat-slider\n          thumbLabel\n          (change)=\"this.onSaturationChange($event)\"\n          min=\"1\"\n          max=\"100\"></mat-slider><p> </p>\n      </mat-expansion-panel>\n    </mat-accordion><p> </p>\n\n\n    <mat-accordion>\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\n                           (closed)=\"panelOpenState = false\">\n        <mat-expansion-panel-header>\n          <mat-panel-title>\n            Layers\n          </mat-panel-title>\n        </mat-expansion-panel-header>\n        <mat-slide-toggle\n            color=\"primary\"\n            (change)=\"this.onToggle($event)\"\n            class=\"example-margin\"\n            [checked]=\"checked\"\n            [disabled]=\"disabled\">\n          GeoJSON\n        </mat-slide-toggle><p> </p>\n      </mat-expansion-panel>\n    </mat-accordion><p> </p>\n\n    <mat-accordion>\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\n                           (closed)=\"panelOpenState = false\">\n        <mat-expansion-panel-header>\n          <mat-panel-title>\n            Mouse & Keyboard Controls\n          </mat-panel-title>\n        </mat-expansion-panel-header>\n        <mat-tab-group animationDuration=\"0ms\">\n          <mat-tab label=\"Section ID\">\n            <br>\n            <mat-form-field appearance=\"standard\">\n              <mat-label>Brain ID</mat-label>\n              <input matInput placeholder=\"E.g. 4240\">\n            </mat-form-field>\n            <mat-form-field appearance=\"standard\">\n              <mat-label>Section No</mat-label>\n              <input matInput placeholder=\"E.g. 0025\">\n            </mat-form-field>\n            <br>\n          </mat-tab>\n          <mat-tab label=\"Second\">\n            <div class=\"example-small-box mat-elevation-z4\">\n              Small content\n            </div>\n          </mat-tab>\n        </mat-tab-group><p> </p>\n      </mat-expansion-panel>\n    </mat-accordion><p> </p>\n\n  </mat-drawer>\n\n  <div class=\"example-sidenav-content\">\n    <div id=\"map\" class=\"map\">\n    </div>\n    <mat-card *ngIf=\"showFillerREPL\" class=\"example-card\">\n      <mat-card-header>\n        <mat-card-title>REPL Bot</mat-card-title>\n        <mat-card-subtitle>Automate NGV Task using REPL Bot</mat-card-subtitle>\n      </mat-card-header>\n      <!--<img mat-card-image src=\"https://img.freepik.com/free-vector/set-cute-robot-ai-character-with-circuits-background_99413-92.jpg\" height=\"200\">-->\n      <mat-card-content>\n        <form class=\"example-form\">\n          <mat-form-field class=\"example-full-width\">\n            <input type=\"text\"\n                   id = \"replID\"\n                   placeholder=\"Command line\"\n                   aria-label=\"Number\"\n                   matInput\n                   [formControl]=\"myControl\"\n                   [matAutocomplete]=\"auto\">\n            <mat-autocomplete #auto=\"matAutocomplete\">\n              <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\n                {{option}}\n              </mat-option>\n            </mat-autocomplete>\n          </mat-form-field>\n        </form>\n        <mat-card-actions>\n          <button (click)=\"this.REPL()\" mat-raised-button>Submit</button>\n        </mat-card-actions>\n      </mat-card-content>\n\n    </mat-card>\n\n  </div>\n\n</mat-drawer-container>\n");
 
 /***/ }),
 
@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("mat-slider {\r\n  width: 300px;\r\n}\r\n\r\n.mat-form-field {\r\n  margin-right: 12px;\r\n}\r\n\r\n.example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.example-spacer {\r\n  flex: 1 1 auto;\r\n}\r\n\r\n.example-container {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n.example-sidenav-content {\r\n  display: flex;\r\n  height: 100%;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n.example-sidenav {\r\n  padding: 20px;\r\n}\r\n\r\n.example-card {\r\n  max-width: 400px;\r\n}\r\n\r\n.example-header-image {\r\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\r\n  background-size: cover;\r\n}\r\n\r\n/* maps css */\r\n\r\n.map {\r\n  width: 100%;\r\n  height: 100vh;\r\n}\r\n\r\n/* tabs css */\r\n\r\n.example-small-box, .example-large-box {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin: 16px;\r\n  padding: 16px;\r\n  border-radius: 8px;\r\n  width: 50px;\r\n}\r\n\r\n.example-small-box {\r\n  height: 300px;\r\n  width: 200px;\r\n}\r\n\r\n.example-large-box {\r\n  height: 100px;\r\n  width: 50px;\r\n}\r\n\r\n/* Slide toggle */\r\n\r\n.example-h2 {\r\n  margin: 10px;\r\n}\r\n\r\n.example-section {\r\n  display: flex;\r\n  align-content: center;\r\n  align-items: center;\r\n  height: 60px;\r\n}\r\n\r\n.example-margin {\r\n  margin: 10px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBR0E7RUFDRSxnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsV0FBVztBQUNiOztBQUVBO0VBQ0UsV0FBVztBQUNiOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQix1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSxhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxtRkFBbUY7RUFDbkYsc0JBQXNCO0FBQ3hCOztBQUVBLGFBQWE7O0FBQ2I7RUFDRSxXQUFXO0VBQ1gsYUFBYTtBQUNmOztBQUVBLGFBQWE7O0FBQ2I7RUFDRSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHVCQUF1QjtFQUN2QixZQUFZO0VBQ1osYUFBYTtFQUNiLGtCQUFrQjtFQUNsQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsWUFBWTtBQUNkOztBQUVBO0VBQ0UsYUFBYTtFQUNiLFdBQVc7QUFDYjs7QUFHQSxpQkFBaUI7O0FBQ2pCO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHFCQUFxQjtFQUNyQixtQkFBbUI7RUFDbkIsWUFBWTtBQUNkOztBQUVBO0VBQ0UsWUFBWTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtc2xpZGVyIHtcclxuICB3aWR0aDogMzAwcHg7XHJcbn1cclxuXHJcbi5tYXQtZm9ybS1maWVsZCB7XHJcbiAgbWFyZ2luLXJpZ2h0OiAxMnB4O1xyXG59XHJcblxyXG5cclxuLmV4YW1wbGUtZm9ybSB7XHJcbiAgbWluLXdpZHRoOiAxNTBweDtcclxuICBtYXgtd2lkdGg6IDUwMHB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uZXhhbXBsZS1mdWxsLXdpZHRoIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLmV4YW1wbGUtZm9ybSB7XHJcbiAgbWluLXdpZHRoOiAxNTBweDtcclxuICBtYXgtd2lkdGg6IDUwMHB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uZXhhbXBsZS1mdWxsLXdpZHRoIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLmV4YW1wbGUtc3BhY2VyIHtcclxuICBmbGV4OiAxIDEgYXV0bztcclxufVxyXG5cclxuLmV4YW1wbGUtY29udGFpbmVyIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuXHJcbi5leGFtcGxlLXNpZGVuYXYtY29udGVudCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG5cclxuLmV4YW1wbGUtc2lkZW5hdiB7XHJcbiAgcGFkZGluZzogMjBweDtcclxufVxyXG5cclxuLmV4YW1wbGUtY2FyZCB7XHJcbiAgbWF4LXdpZHRoOiA0MDBweDtcclxufVxyXG5cclxuLmV4YW1wbGUtaGVhZGVyLWltYWdlIHtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJ2h0dHBzOi8vbWF0ZXJpYWwuYW5ndWxhci5pby9hc3NldHMvaW1nL2V4YW1wbGVzL3NoaWJhMS5qcGcnKTtcclxuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG59XHJcblxyXG4vKiBtYXBzIGNzcyAqL1xyXG4ubWFwIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMHZoO1xyXG59XHJcblxyXG4vKiB0YWJzIGNzcyAqL1xyXG4uZXhhbXBsZS1zbWFsbC1ib3gsIC5leGFtcGxlLWxhcmdlLWJveCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIG1hcmdpbjogMTZweDtcclxuICBwYWRkaW5nOiAxNnB4O1xyXG4gIGJvcmRlci1yYWRpdXM6IDhweDtcclxuICB3aWR0aDogNTBweDtcclxufVxyXG5cclxuLmV4YW1wbGUtc21hbGwtYm94IHtcclxuICBoZWlnaHQ6IDMwMHB4O1xyXG4gIHdpZHRoOiAyMDBweDtcclxufVxyXG5cclxuLmV4YW1wbGUtbGFyZ2UtYm94IHtcclxuICBoZWlnaHQ6IDEwMHB4O1xyXG4gIHdpZHRoOiA1MHB4O1xyXG59XHJcblxyXG5cclxuLyogU2xpZGUgdG9nZ2xlICovXHJcbi5leGFtcGxlLWgyIHtcclxuICBtYXJnaW46IDEwcHg7XHJcbn1cclxuXHJcbi5leGFtcGxlLXNlY3Rpb24ge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgYWxpZ24tY29udGVudDogY2VudGVyO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgaGVpZ2h0OiA2MHB4O1xyXG59XHJcblxyXG4uZXhhbXBsZS1tYXJnaW4ge1xyXG4gIG1hcmdpbjogMTBweDtcclxufVxyXG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("mat-slider {\n  width: 300px;\n}\n\n.mat-form-field {\n  margin-right: 12px;\n}\n\n.example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n\n.example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n\n.example-spacer {\n  flex: 1 1 auto;\n}\n\n.example-container {\n  width: 100%;\n  height: 100%;\n}\n\n.example-sidenav-content {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-sidenav {\n  padding: 20px;\n}\n\n.example-card {\n  max-width: 400px;\n}\n\n.example-header-image {\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}\n\n/* maps css */\n\n.map {\n  width: 100%;\n  height: 100vh;\n}\n\n/* tabs css */\n\n.example-small-box, .example-large-box {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin: 16px;\n  padding: 16px;\n  border-radius: 8px;\n  width: 50px;\n}\n\n.example-small-box {\n  height: 300px;\n  width: 200px;\n}\n\n.example-large-box {\n  height: 100px;\n  width: 50px;\n}\n\n/* Slide toggle */\n\n.example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 10px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBR0E7RUFDRSxnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsV0FBVztBQUNiOztBQUVBO0VBQ0UsV0FBVztBQUNiOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQix1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSxhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxtRkFBbUY7RUFDbkYsc0JBQXNCO0FBQ3hCOztBQUVBLGFBQWE7O0FBQ2I7RUFDRSxXQUFXO0VBQ1gsYUFBYTtBQUNmOztBQUVBLGFBQWE7O0FBQ2I7RUFDRSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHVCQUF1QjtFQUN2QixZQUFZO0VBQ1osYUFBYTtFQUNiLGtCQUFrQjtFQUNsQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsWUFBWTtBQUNkOztBQUVBO0VBQ0UsYUFBYTtFQUNiLFdBQVc7QUFDYjs7QUFHQSxpQkFBaUI7O0FBQ2pCO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHFCQUFxQjtFQUNyQixtQkFBbUI7RUFDbkIsWUFBWTtBQUNkOztBQUVBO0VBQ0UsWUFBWTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtc2xpZGVyIHtcbiAgd2lkdGg6IDMwMHB4O1xufVxuXG4ubWF0LWZvcm0tZmllbGQge1xuICBtYXJnaW4tcmlnaHQ6IDEycHg7XG59XG5cblxuLmV4YW1wbGUtZm9ybSB7XG4gIG1pbi13aWR0aDogMTUwcHg7XG4gIG1heC13aWR0aDogNTAwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uZXhhbXBsZS1mdWxsLXdpZHRoIHtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5leGFtcGxlLWZvcm0ge1xuICBtaW4td2lkdGg6IDE1MHB4O1xuICBtYXgtd2lkdGg6IDUwMHB4O1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmV4YW1wbGUtZnVsbC13aWR0aCB7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uZXhhbXBsZS1zcGFjZXIge1xuICBmbGV4OiAxIDEgYXV0bztcbn1cblxuLmV4YW1wbGUtY29udGFpbmVyIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn1cblxuLmV4YW1wbGUtc2lkZW5hdi1jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbiAgaGVpZ2h0OiAxMDAlO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cblxuLmV4YW1wbGUtc2lkZW5hdiB7XG4gIHBhZGRpbmc6IDIwcHg7XG59XG5cbi5leGFtcGxlLWNhcmQge1xuICBtYXgtd2lkdGg6IDQwMHB4O1xufVxuXG4uZXhhbXBsZS1oZWFkZXItaW1hZ2Uge1xuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJ2h0dHBzOi8vbWF0ZXJpYWwuYW5ndWxhci5pby9hc3NldHMvaW1nL2V4YW1wbGVzL3NoaWJhMS5qcGcnKTtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3Zlcjtcbn1cblxuLyogbWFwcyBjc3MgKi9cbi5tYXAge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDB2aDtcbn1cblxuLyogdGFicyBjc3MgKi9cbi5leGFtcGxlLXNtYWxsLWJveCwgLmV4YW1wbGUtbGFyZ2UtYm94IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIG1hcmdpbjogMTZweDtcbiAgcGFkZGluZzogMTZweDtcbiAgYm9yZGVyLXJhZGl1czogOHB4O1xuICB3aWR0aDogNTBweDtcbn1cblxuLmV4YW1wbGUtc21hbGwtYm94IHtcbiAgaGVpZ2h0OiAzMDBweDtcbiAgd2lkdGg6IDIwMHB4O1xufVxuXG4uZXhhbXBsZS1sYXJnZS1ib3gge1xuICBoZWlnaHQ6IDEwMHB4O1xuICB3aWR0aDogNTBweDtcbn1cblxuXG4vKiBTbGlkZSB0b2dnbGUgKi9cbi5leGFtcGxlLWgyIHtcbiAgbWFyZ2luOiAxMHB4O1xufVxuXG4uZXhhbXBsZS1zZWN0aW9uIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24tY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBoZWlnaHQ6IDYwcHg7XG59XG5cbi5leGFtcGxlLW1hcmdpbiB7XG4gIG1hcmdpbjogMTBweDtcbn1cbiJdfQ== */");
 
 /***/ }),
 
@@ -182,11 +182,15 @@ let AppComponent = class AppComponent {
         });
         this.modifyVector = new ol_layer__WEBPACK_IMPORTED_MODULE_13__["Vector"]({
             source: new ol_source__WEBPACK_IMPORTED_MODULE_12__["Vector"]({
-                url: 'https://raw.githubusercontent.com/Sai-Adarsh/viewer-geojson/main/brain.geo.json',
+                url: 'http://mitradevel.cshl.org/webtools/seriesbrowser/getatlasgeojson/PMD2057/0025/',
                 format: new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_14__["default"](),
                 wrapX: false,
+                crossOrigin: 'anonymous',
+                zDirection: -1,
+                size: [24000, 24000],
             }),
         });
+        this.modifyVector.getStyle().apply();
         this.select = new ol_interaction__WEBPACK_IMPORTED_MODULE_8__["Select"]({
             wrapX: false,
         });
@@ -260,7 +264,7 @@ let AppComponent = class AppComponent {
             this.layerTile, this.vector, this.modifyVector
         ];
         this.zoomifyLayer = [
-            this.imagery, this.vector
+            this.imagery, this.vector, this.modifyVector
         ];
         this.modifyVector.setVisible(false);
         this.redoStack = [];
@@ -270,7 +274,7 @@ let AppComponent = class AppComponent {
         this.invertValue = "";
         this.map = new ol_Map__WEBPACK_IMPORTED_MODULE_3__["default"]({
             target: 'map',
-            interactions: Object(ol_interaction__WEBPACK_IMPORTED_MODULE_8__["defaults"])().extend([this.select, this.modify]),
+            interactions: Object(ol_interaction__WEBPACK_IMPORTED_MODULE_8__["defaults"])().extend([this.select, this.modify,]),
             layers: this.zoomifyLayer,
             view: new ol_View__WEBPACK_IMPORTED_MODULE_4__["default"]({
                 resolutions: this.imagery.getSource().getTileGrid().getResolutions(),
@@ -306,6 +310,7 @@ let AppComponent = class AppComponent {
     }
     onToggle(event) {
         if (event.checked == true) {
+            console.log("imhere");
             this.modifyVector.setVisible(true);
         }
         else {
@@ -325,50 +330,55 @@ let AppComponent = class AppComponent {
         this.map.addInteraction(this.erasePolygon);
     }
     combine() {
-        var vector_sr = this.vector.getSource();
-        var features = vector_sr.getFeatures();
-        var format = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_14__["default"]();
-        var turfpoly;
-        var polygon;
-        var count = 0;
-        var sty = new ol_style__WEBPACK_IMPORTED_MODULE_10__["Style"]({
-            fill: new ol_style__WEBPACK_IMPORTED_MODULE_10__["Fill"]({
-                color: 'rgba(0,255,255, 0.1)',
-            }),
-            stroke: new ol_style__WEBPACK_IMPORTED_MODULE_10__["Stroke"]({
-                color: '#00FFFF',
-                width: 3,
-            })
-        });
-        var isIntersected = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["polygon"]([]);
-        for (var i = 0; i < features.length; i++) {
-            turfpoly = format.writeFeatureObject(features[i]);
+        try {
+            var vector_sr = this.vector.getSource();
+            var features = vector_sr.getFeatures();
+            var format = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_14__["default"]();
+            var turfpoly;
+            var polygon;
+            var count = 0;
+            var sty = new ol_style__WEBPACK_IMPORTED_MODULE_10__["Style"]({
+                fill: new ol_style__WEBPACK_IMPORTED_MODULE_10__["Fill"]({
+                    color: 'rgba(0,255,255, 0.1)',
+                }),
+                stroke: new ol_style__WEBPACK_IMPORTED_MODULE_10__["Stroke"]({
+                    color: '#00FFFF',
+                    width: 3,
+                })
+            });
+            var isIntersected = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["polygon"]([]);
+            for (var i = 0; i < features.length; i++) {
+                turfpoly = format.writeFeatureObject(features[i]);
+                if (count > 0) {
+                    if (features[i].get('name') == "add") {
+                        var uid = features[i].ol_uid;
+                        vector_sr.removeFeature(vector_sr.getFeatureByUid(uid));
+                        polygon = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["union"](polygon, turfpoly);
+                    }
+                    else if (count > 0 && features[i].get('name') == "erase") {
+                        var uid = features[i].ol_uid;
+                        vector_sr.removeFeature(vector_sr.getFeatureByUid(uid));
+                        polygon = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["difference"](polygon, turfpoly);
+                    }
+                }
+                else {
+                    var uid = features[i].ol_uid;
+                    vector_sr.removeFeature(vector_sr.getFeatureByUid(uid));
+                    polygon = format.writeFeatureObject(features[i]);
+                    count = count + 1;
+                }
+            }
             if (count > 0) {
-                if (features[i].get('name') == "add") {
-                    var uid = features[i].ol_uid;
-                    vector_sr.removeFeature(vector_sr.getFeatureByUid(uid));
-                    polygon = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["union"](polygon, turfpoly);
-                }
-                else if (count > 0 && features[i].get('name') == "erase") {
-                    var uid = features[i].ol_uid;
-                    vector_sr.removeFeature(vector_sr.getFeatureByUid(uid));
-                    polygon = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["difference"](polygon, turfpoly);
-                }
+                polygon = format.readFeatures(polygon)[0];
+                polygon.setStyle(sty);
+                vector_sr.addFeature(polygon);
             }
-            else {
-                var uid = features[i].ol_uid;
-                vector_sr.removeFeature(vector_sr.getFeatureByUid(uid));
-                polygon = format.writeFeatureObject(features[i]);
-                count = count + 1;
-            }
+            console.log(vector_sr.getFeatures());
+            this.vector.setSource(vector_sr);
         }
-        if (count > 0) {
-            polygon = format.readFeatures(polygon)[0];
-            polygon.setStyle(sty);
-            vector_sr.addFeature(polygon);
+        catch (error) {
+            console.log("Select region inside added polygon");
         }
-        console.log(vector_sr.getFeatures());
-        this.vector.setSource(vector_sr);
     }
     addInteraction(interactionType) {
         this.draw.setActive(true);
@@ -388,15 +398,25 @@ let AppComponent = class AppComponent {
         this.map.removeInteraction(this.draw);
     }
     deleteDrawing() {
-        this.toBeDeleted = this.vector.getSource().getFeatures()[this.vector.getSource().getFeatures().length - 1];
-        this.vector.getSource().removeFeature(this.toBeDeleted);
-        this.redoStack.push(this.toBeDeleted);
-        console.log(this.redoStack);
+        try {
+            this.toBeDeleted = this.vector.getSource().getFeatures()[this.vector.getSource().getFeatures().length - 1];
+            this.vector.getSource().removeFeature(this.toBeDeleted);
+            this.redoStack.push(this.toBeDeleted);
+            console.log(this.redoStack);
+        }
+        catch (error) {
+            console.log("No more undos");
+        }
     }
     redoDrawing() {
-        this.toBeRedrawn = this.redoStack[this.redoStack.length - 1];
-        this.vector.getSource().addFeature(this.toBeRedrawn);
-        this.redoStack.pop();
+        try {
+            this.toBeRedrawn = this.redoStack[this.redoStack.length - 1];
+            this.vector.getSource().addFeature(this.toBeRedrawn);
+            this.redoStack.pop();
+        }
+        catch (error) {
+            console.log("No more redos");
+        }
     }
     REPL() {
         if (this.myControl.value == "turnOnGEOJson") {
@@ -568,7 +588,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\MSI\next-gen-viewer\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/dell/Desktop/next-gen-viewer/src/main.ts */"./src/main.ts");
 
 
 /***/ })
