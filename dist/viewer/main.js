@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<mat-toolbar>\r\n   <button mat-icon-button class=\"example-icon\" (click)=\"drawer.toggle()\" aria-label=\"Example icon-button with menu icon\">\r\n    <mat-icon>menu</mat-icon>\r\n  </button>\r\n  <span>Next Gen Viewer</span>&nbsp;&nbsp;\r\n  <button (click)=\"this.deleteDrawing()\" mat-raised-button>\r\n    <mat-icon>undo</mat-icon>\r\n  </button>&nbsp;\r\n  <button (click)=\"this.redoDrawing()\" mat-raised-button>\r\n    <mat-icon>redo</mat-icon>\r\n  </button>&nbsp;\r\n  <button color=\"accent\" (click)=\"showFillerREPL = !showFillerREPL\" mat-raised-button>\r\n    Toggle REPL\r\n  </button>&nbsp;\r\n  <span class=\"example-spacer\"></span>\r\n  <p>  </p>\r\n  <button mat-icon-button class=\"example-icon\" aria-label=\"Example icon-button with share icon\">\r\n   <mat-icon>share</mat-icon>\r\n  </button>\r\n  \r\n</mat-toolbar>\r\n\r\n\r\n\r\n\r\n<mat-drawer-container class=\"example-container\" autosize>\r\n\r\n  <mat-drawer #drawer class=\"example-sidenav\" mode=\"side\">\r\n\r\n    <mat-accordion>\r\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                           (closed)=\"panelOpenState = false\">\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title>\r\n            Brain Information\r\n          </mat-panel-title>\r\n        </mat-expansion-panel-header>\r\n        <br>\r\n        <mat-form-field appearance=\"standard\">\r\n          <mat-label>Section No</mat-label>\r\n          <input (change)=\"this.emailUpdated($event)\" matInput placeholder=\"E.g. 0025\">\r\n        </mat-form-field>\r\n        <mat-card-actions>\r\n          <button (click)=\"this.brainIDUpdated()\" mat-raised-button>Submit</button>\r\n        </mat-card-actions><p> </p>\r\n        <mat-slide-toggle\r\n            color=\"primary\"\r\n            (change)=\"this.onToggleTracer($event)\"\r\n            class=\"example-margin\"\r\n            [checked]=\"checked\"\r\n            [disabled]=\"disabled\">\r\n          Toggle Tracer\r\n        </mat-slide-toggle><p> </p>\r\n        <br>\r\n      </mat-expansion-panel>\r\n    </mat-accordion><p> </p>\r\n\r\n\r\n    <mat-accordion>\r\n      \r\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                           (closed)=\"panelOpenState = false\">\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title>\r\n            Annotation Tools\r\n          </mat-panel-title>\r\n        </mat-expansion-panel-header>\r\n        <p> </p>\r\n        <button (click)=\"this.addInteraction('Point')\" mat-raised-button>\r\n          Point\r\n        </button><p> </p>\r\n        <button (click)=\"this.addInteraction('LineString')\" mat-raised-button>\r\n          LineString\r\n        </button><p> </p>\r\n        <button (click)=\"this.addInteraction('Polygon')\" mat-raised-button>\r\n          Polygon\r\n        </button><p> </p>\r\n        <button (click)=\"this.addInteraction('Circle')\" mat-raised-button>\r\n          Circle\r\n        </button><p> </p>\r\n        <button (click)=\"this.removeInteraction()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n            <mat-icon>clear</mat-icon>\r\n        </button><p> </p><button (click)=\"this.deleteDrawing()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n            <mat-icon>delete</mat-icon>\r\n        </button>\r\n      </mat-expansion-panel>\r\n    </mat-accordion><p> </p>\r\n    <mat-accordion>\r\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                           (closed)=\"panelOpenState = false\">\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title>\r\n            Union Difference\r\n          </mat-panel-title>\r\n        </mat-expansion-panel-header>\r\n        <button (click)=\"this.addPolygons()\" mat-raised-button>\r\n          Add Polygon\r\n        </button><p> </p>\r\n        <button (click)=\"this.erasePolygons()\" mat-raised-button>\r\n          Erase Polygon\r\n        </button><p> </p>\r\n        <button (click)=\"this.combine()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n              <mat-icon>track_changes</mat-icon>\r\n              Combine\r\n        </button>\r\n      </mat-expansion-panel>\r\n    </mat-accordion><p> </p>\r\n    \r\n    <mat-accordion>\r\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                           (closed)=\"panelOpenState = false\">\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title>\r\n            Save & Load\r\n          </mat-panel-title>\r\n        </mat-expansion-panel-header>\r\n        <button (click)=\"openSnackBar('Saving Polygons to firebase', 'Dismiss'); savePolygonsToFirebase()\" color=\"primary\" mat-raised-button>\r\n          Save Polygons\r\n        </button><p> </p>\r\n        <button (click)=\"retrievePolygonsFromFirebase(); openSnackBar('Retrieving Polygons to firebase', 'Dismiss')\" color=\"primary\" mat-raised-button>\r\n          Retrieve Polygons\r\n        </button><p> </p>\r\n        <button (click)=\"loadPolygonsFromFirebase()\" color=\"primary\" mat-raised-button>\r\n          Load Polygons\r\n        </button><p> </p>\r\n      </mat-expansion-panel>\r\n    </mat-accordion><p> </p>\r\n\r\n    <mat-accordion>\r\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                           (closed)=\"panelOpenState = false\">\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title>\r\n            Colour Intensity\r\n          </mat-panel-title>\r\n        </mat-expansion-panel-header>\r\n        <button (click)=\"resetToDefault()\" color=\"primary\" mat-raised-button>\r\n          Reset to default\r\n        </button><p> </p>\r\n        Invert\r\n        <mat-slider\r\n          thumbLabel\r\n          (change)=\"this.onInvertChange($event)\"\r\n          min=\"1\"\r\n          max=\"100\"></mat-slider><p> </p>\r\n        Hue\r\n        <mat-slider\r\n          thumbLabel\r\n          (change)=\"this.onHueChange($event)\"\r\n          min=\"0\"\r\n          max=\"360\"></mat-slider><p> </p>\r\n        Saturation\r\n        <mat-slider\r\n          thumbLabel\r\n          (change)=\"this.onSaturationChange($event)\"\r\n          min=\"1\"\r\n          max=\"100\"></mat-slider><p> </p>\r\n      </mat-expansion-panel>\r\n    </mat-accordion><p> </p>\r\n\r\n\r\n    <mat-accordion>\r\n      <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                           (closed)=\"panelOpenState = false\">\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title>\r\n            Layers\r\n          </mat-panel-title>\r\n        </mat-expansion-panel-header>\r\n        <mat-slide-toggle\r\n            color=\"primary\"\r\n            (change)=\"this.onToggle($event)\"\r\n            class=\"example-margin\"\r\n            [checked]=\"checked\"\r\n            [disabled]=\"disabled\">\r\n          GeoJSON\r\n        </mat-slide-toggle><p> </p>\r\n      </mat-expansion-panel>\r\n    </mat-accordion><p> </p>\r\n\r\n    \r\n\r\n  </mat-drawer>\r\n\r\n  <div class=\"example-sidenav-content\">\r\n    <div id=\"map\" class=\"map\">\r\n    </div>\r\n    <mat-card *ngIf=\"showFillerREPL\" class=\"example-card\">\r\n      <mat-card-header>\r\n        <mat-card-title>REPL Bot</mat-card-title>\r\n        <mat-card-subtitle>Automate NGV Task using REPL Bot</mat-card-subtitle>\r\n      </mat-card-header>\r\n      <!--<img mat-card-image src=\"https://img.freepik.com/free-vector/set-cute-robot-ai-character-with-circuits-background_99413-92.jpg\" height=\"200\">-->\r\n      <mat-card-content>\r\n        <form class=\"example-form\">\r\n          <mat-form-field class=\"example-full-width\">\r\n            <input type=\"text\"\r\n                   id = \"replID\"\r\n                   placeholder=\"Command line\"\r\n                   aria-label=\"Number\"\r\n                   matInput\r\n                   [formControl]=\"myControl\"\r\n                   [matAutocomplete]=\"auto\">\r\n            <mat-autocomplete #auto=\"matAutocomplete\">\r\n              <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\r\n                {{option}}\r\n              </mat-option>\r\n            </mat-autocomplete>\r\n          </mat-form-field>\r\n        </form>\r\n        <mat-card-actions>\r\n          <button (click)=\"this.REPL()\" mat-raised-button>Submit</button>\r\n        </mat-card-actions>\r\n      </mat-card-content>\r\n\r\n    </mat-card>\r\n\r\n  </div>\r\n\r\n</mat-drawer-container>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n\t<mat-sidenav-container class=\"example-container\">\r\n\t\t<mat-sidenav #sidenav1 mode=\"side\" position=\"end\" role=\"navigation\" class=\"example-sidenav\">\r\n        <br /><br />\r\n        <mat-card-header>\r\n          <mat-card-title>Development Tools</mat-card-title>\r\n        </mat-card-header><p> </p>\r\n        <mat-accordion>\r\n          <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                              (closed)=\"panelOpenState = false\">\r\n            <mat-expansion-panel-header>\r\n              <mat-panel-title>\r\n                Annotation Tools\r\n              </mat-panel-title>\r\n            </mat-expansion-panel-header>\r\n            <p> </p>\r\n            <button (click)=\"this.addInteraction('Point')\" mat-raised-button>\r\n              Point\r\n            </button><p> </p>\r\n            <button (click)=\"this.addInteraction('LineString')\" mat-raised-button>\r\n              LineString\r\n            </button><p> </p>\r\n            <button (click)=\"this.addInteraction('Polygon')\" mat-raised-button>\r\n              Polygon\r\n            </button><p> </p>\r\n            <button (click)=\"this.addInteraction('Circle')\" mat-raised-button>\r\n              Circle\r\n            </button><p> </p>\r\n            <button (click)=\"this.removeInteraction()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n                <mat-icon>clear</mat-icon>\r\n            </button><p> </p><button (click)=\"this.deleteDrawing()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n                <mat-icon>delete</mat-icon>\r\n            </button>\r\n          </mat-expansion-panel>\r\n        </mat-accordion><p> </p>\r\n        <mat-accordion>\r\n          <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                              (closed)=\"panelOpenState = false\">\r\n            <mat-expansion-panel-header>\r\n              <mat-panel-title>\r\n                Union Difference\r\n              </mat-panel-title>\r\n            </mat-expansion-panel-header>\r\n            <button (click)=\"this.addPolygons()\" mat-raised-button>\r\n              Add Polygon\r\n            </button><p> </p>\r\n            <button (click)=\"this.erasePolygons()\" mat-raised-button>\r\n              Erase Polygon\r\n            </button><p> </p>\r\n            <button (click)=\"this.combine()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n                  <mat-icon>track_changes</mat-icon>\r\n                  Combine\r\n            </button>\r\n          </mat-expansion-panel>\r\n        </mat-accordion><p> </p>\r\n\r\n        <mat-accordion>\r\n          <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                              (closed)=\"panelOpenState = false\">\r\n            <mat-expansion-panel-header>\r\n              <mat-panel-title>\r\n                Colour Intensity\r\n              </mat-panel-title>\r\n            </mat-expansion-panel-header>\r\n            <button (click)=\"resetToDefault()\" color=\"primary\" mat-raised-button>\r\n              Reset to default\r\n            </button><p> </p>\r\n            Invert\r\n            <mat-slider\r\n              thumbLabel\r\n              (change)=\"this.onInvertChange($event)\"\r\n              min=\"1\"\r\n              max=\"100\"></mat-slider><p> </p>\r\n            Hue\r\n            <mat-slider\r\n              thumbLabel\r\n              (change)=\"this.onHueChange($event)\"\r\n              min=\"0\"\r\n              max=\"360\"></mat-slider><p> </p>\r\n            Saturation\r\n            <mat-slider\r\n              thumbLabel\r\n              (change)=\"this.onSaturationChange($event)\"\r\n              min=\"1\"\r\n              max=\"100\"></mat-slider><p> </p>\r\n          </mat-expansion-panel>\r\n        </mat-accordion><p> </p>\r\n\t\t</mat-sidenav>\r\n\t\t<mat-sidenav-content>\r\n\t\t\t<mat-sidenav-container class=\"example-container\">\r\n\t\t\t\t<mat-sidenav #sidenav2 mode=\"side\" position=\"start\" role=\"navigation\" class=\"example-sidenav\">\r\n\r\n\t\t\t\t\t<div fxLayout=\"column\" class=\"sidenav-normal\">\r\n            <center>\r\n              <button mat-fab color=\"primary\" (click)=\"sidenav2.toggle()\">\r\n                <mat-icon>menu</mat-icon>\r\n              </button>\r\n            </center><br />\r\n            <mat-accordion>\r\n              <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                                   (closed)=\"panelOpenState = false\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Brain Information\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n                <br>\r\n                <mat-form-field appearance=\"standard\">\r\n                  <mat-label>Brain ID</mat-label>\r\n                  <input matInput placeholder=\"E.g. 0025\">\r\n                </mat-form-field><br />\r\n                <mat-form-field appearance=\"standard\">\r\n                  <mat-label>Section No</mat-label>\r\n                  <input (change)=\"this.emailUpdated($event)\" matInput placeholder=\"E.g. 0025\">\r\n                </mat-form-field><p> </p>\r\n                <mat-slide-toggle\r\n                    color=\"primary\"\r\n                    (change)=\"this.onToggleTracer($event)\"\r\n                    class=\"example-margin\"\r\n                    [checked]=\"checked\"\r\n                    [disabled]=\"disabled\">\r\n                  Toggle Tracer\r\n                </mat-slide-toggle><p> </p>\r\n                <mat-card-actions>\r\n                  <button (click)=\"this.brainIDUpdated()\" color=\"primary\" mat-raised-button>Load</button>\r\n                </mat-card-actions><p> </p>\r\n                <br>\r\n              </mat-expansion-panel>\r\n            </mat-accordion><p> </p>\r\n\r\n            <mat-accordion>\r\n              <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                                   (closed)=\"panelOpenState = false\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Atlas\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n                <button (click)=\"openSnackBar('Saving Polygons to firebase', 'Dismiss'); savePolygonsToFirebase()\" color=\"primary\" mat-raised-button>\r\n                  Save Polygons\r\n                </button><p> </p>\r\n                <button (click)=\"retrievePolygonsFromFirebase(); openSnackBar('Retrieving Polygons to firebase', 'Dismiss')\" color=\"primary\" mat-raised-button>\r\n                  Retrieve Polygons\r\n                </button><p> </p>\r\n                <button (click)=\"loadPolygonsFromFirebase()\" color=\"primary\" mat-raised-button>\r\n                  Load Polygons\r\n                </button><p> </p>\r\n                <div class=\"menu-overflow-hidden\" id=\"jstree_block\" style=\"height: calc(50% - 2px); margin-left: 10px;\">\r\n                  <div class=\"active-pink-3 active-pink-4 mb-4\">\r\n                      <mat-form-field appearance=\"standard\">\r\n                        <mat-label>Region Name</mat-label>\r\n                        <input class=\"form-control search-input\" (change)=\"this.Tree($event);\" matInput placeholder=\"E.g. Hypothalamus\">\r\n                      </mat-form-field>\r\n                   </div>\r\n                  <div style=\"white-space: nowrap; font-size: 17px; font-family: 'Big Shoulders Stencil Display', cursive; font-family: 'Roboto', sans-serif;\" id='atlas_info'></div>\r\n                </div>\r\n              </mat-expansion-panel>\r\n            </mat-accordion><p> </p>\r\n        \r\n            <mat-accordion>\r\n              <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                                   (closed)=\"panelOpenState = false\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Layers\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n                <mat-slide-toggle\r\n                    color=\"primary\"\r\n                    (change)=\"this.onToggle($event)\"\r\n                    class=\"example-margin\"\r\n                    [checked]=\"checked\"\r\n                    [disabled]=\"disabled\">\r\n                  GeoJSON\r\n                </mat-slide-toggle><p> </p>\r\n              </mat-expansion-panel>\r\n            </mat-accordion><p> </p>\r\n        \r\n            <mat-accordion>\r\n              <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                                   (closed)=\"panelOpenState = false\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    REPL\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n                <mat-card-content>\r\n                  <form>\r\n                    <mat-form-field mat-form-field appearance=\"standard\">\r\n                      <input type=\"text\"\r\n                            id = \"replID\"\r\n                            placeholder=\"Command line\"\r\n                            aria-label=\"Number\"\r\n                            matInput\r\n                            [formControl]=\"myControl\"\r\n                            [matAutocomplete]=\"auto\">\r\n                      <mat-autocomplete #auto=\"matAutocomplete\">\r\n                        <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\r\n                          {{option}}\r\n                        </mat-option>\r\n                      </mat-autocomplete>\r\n                    </mat-form-field>\r\n                  </form>\r\n                  <mat-card-actions>\r\n                    <button color=\"primary\" (click)=\"this.REPL()\" mat-raised-button>Run Command</button>\r\n                  </mat-card-actions>\r\n                </mat-card-content><p> </p>\r\n              </mat-expansion-panel>\r\n            </mat-accordion><p> </p>\r\n      \r\n\r\n\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t</mat-sidenav>\r\n\t\t\t\t<mat-sidenav-content>\r\n\t\t\t\t\t<mat-toolbar role=\"toolbar\" class=\"main-header mat-elevation-z1 sticky-header\">\r\n              <button mat-icon-button class=\"example-icon\" (click)=\"sidenav2.toggle()\"  aria-label=\"Example icon-button with menu icon\">\r\n                <mat-icon>menu</mat-icon>\r\n              </button>\r\n              <span>Next Gen Viewer</span>\r\n              <span class=\"example-spacer\"></span>\r\n                <button (click)=\"this.deleteDrawing()\" mat-raised-button>\r\n                  <mat-icon>undo</mat-icon>\r\n                </button>&nbsp;\r\n                <button (click)=\"this.redoDrawing()\" mat-raised-button>\r\n                  <mat-icon>redo</mat-icon>\r\n                </button>&nbsp;\r\n                <button color=\"accent\" (click)=\"sidenav1.toggle()\" mat-raised-button>\r\n                  Toggle <mat-icon>settings</mat-icon>\r\n                </button>&nbsp;\r\n              <p>  </p>\r\n              <button mat-icon-button class=\"example-icon\" aria-label=\"Example icon-button with share icon\">\r\n              <mat-icon>share</mat-icon>\r\n              </button>\r\n\t\t\t\t\t</mat-toolbar>\r\n\r\n          <div class=\"example-sidenav-content\">\r\n            <div id=\"map\" class=\"map\"></div>\r\n          </div> \r\n\r\n\t\t\t\t</mat-sidenav-content>\r\n\t\t\t</mat-sidenav-container>\r\n\t\t</mat-sidenav-content>\r\n\t</mat-sidenav-container>\r\n</div>");
 
 /***/ }),
 
@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("mat-slider {\r\n  width: 300px;\r\n}\r\n\r\n.mat-form-field {\r\n  margin-right: 12px;\r\n}\r\n\r\n.example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.example-spacer {\r\n  flex: 1 1 auto;\r\n}\r\n\r\n.example-container {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n.example-sidenav-content {\r\n  display: flex;\r\n  height: 100%;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n.example-sidenav {\r\n  padding: 20px;\r\n}\r\n\r\n.example-card {\r\n  max-width: 400px;\r\n}\r\n\r\n.example-header-image {\r\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\r\n  background-size: cover;\r\n}\r\n\r\n/* maps css */\r\n\r\n.map {\r\n  width: 100%;\r\n  height: 100vh;\r\n}\r\n\r\n/* tabs css */\r\n\r\n.example-small-box, .example-large-box {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin: 16px;\r\n  padding: 16px;\r\n  border-radius: 8px;\r\n  width: 50px;\r\n}\r\n\r\n.example-small-box {\r\n  height: 300px;\r\n  width: 200px;\r\n}\r\n\r\n.example-large-box {\r\n  height: 100px;\r\n  width: 50px;\r\n}\r\n\r\n/* Slide toggle */\r\n\r\n.example-h2 {\r\n  margin: 10px;\r\n}\r\n\r\n.example-section {\r\n  display: flex;\r\n  align-content: center;\r\n  align-items: center;\r\n  height: 60px;\r\n}\r\n\r\n.example-margin {\r\n  margin: 10px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBR0E7RUFDRSxnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsV0FBVztBQUNiOztBQUVBO0VBQ0UsV0FBVztBQUNiOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQix1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSxhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxtRkFBbUY7RUFDbkYsc0JBQXNCO0FBQ3hCOztBQUVBLGFBQWE7O0FBQ2I7RUFDRSxXQUFXO0VBQ1gsYUFBYTtBQUNmOztBQUVBLGFBQWE7O0FBQ2I7RUFDRSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHVCQUF1QjtFQUN2QixZQUFZO0VBQ1osYUFBYTtFQUNiLGtCQUFrQjtFQUNsQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsWUFBWTtBQUNkOztBQUVBO0VBQ0UsYUFBYTtFQUNiLFdBQVc7QUFDYjs7QUFHQSxpQkFBaUI7O0FBQ2pCO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHFCQUFxQjtFQUNyQixtQkFBbUI7RUFDbkIsWUFBWTtBQUNkOztBQUVBO0VBQ0UsWUFBWTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtc2xpZGVyIHtcclxuICB3aWR0aDogMzAwcHg7XHJcbn1cclxuXHJcbi5tYXQtZm9ybS1maWVsZCB7XHJcbiAgbWFyZ2luLXJpZ2h0OiAxMnB4O1xyXG59XHJcblxyXG5cclxuLmV4YW1wbGUtZm9ybSB7XHJcbiAgbWluLXdpZHRoOiAxNTBweDtcclxuICBtYXgtd2lkdGg6IDUwMHB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uZXhhbXBsZS1mdWxsLXdpZHRoIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLmV4YW1wbGUtZm9ybSB7XHJcbiAgbWluLXdpZHRoOiAxNTBweDtcclxuICBtYXgtd2lkdGg6IDUwMHB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uZXhhbXBsZS1mdWxsLXdpZHRoIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLmV4YW1wbGUtc3BhY2VyIHtcclxuICBmbGV4OiAxIDEgYXV0bztcclxufVxyXG5cclxuLmV4YW1wbGUtY29udGFpbmVyIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuXHJcbi5leGFtcGxlLXNpZGVuYXYtY29udGVudCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG5cclxuLmV4YW1wbGUtc2lkZW5hdiB7XHJcbiAgcGFkZGluZzogMjBweDtcclxufVxyXG5cclxuLmV4YW1wbGUtY2FyZCB7XHJcbiAgbWF4LXdpZHRoOiA0MDBweDtcclxufVxyXG5cclxuLmV4YW1wbGUtaGVhZGVyLWltYWdlIHtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJ2h0dHBzOi8vbWF0ZXJpYWwuYW5ndWxhci5pby9hc3NldHMvaW1nL2V4YW1wbGVzL3NoaWJhMS5qcGcnKTtcclxuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG59XHJcblxyXG4vKiBtYXBzIGNzcyAqL1xyXG4ubWFwIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMHZoO1xyXG59XHJcblxyXG4vKiB0YWJzIGNzcyAqL1xyXG4uZXhhbXBsZS1zbWFsbC1ib3gsIC5leGFtcGxlLWxhcmdlLWJveCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIG1hcmdpbjogMTZweDtcclxuICBwYWRkaW5nOiAxNnB4O1xyXG4gIGJvcmRlci1yYWRpdXM6IDhweDtcclxuICB3aWR0aDogNTBweDtcclxufVxyXG5cclxuLmV4YW1wbGUtc21hbGwtYm94IHtcclxuICBoZWlnaHQ6IDMwMHB4O1xyXG4gIHdpZHRoOiAyMDBweDtcclxufVxyXG5cclxuLmV4YW1wbGUtbGFyZ2UtYm94IHtcclxuICBoZWlnaHQ6IDEwMHB4O1xyXG4gIHdpZHRoOiA1MHB4O1xyXG59XHJcblxyXG5cclxuLyogU2xpZGUgdG9nZ2xlICovXHJcbi5leGFtcGxlLWgyIHtcclxuICBtYXJnaW46IDEwcHg7XHJcbn1cclxuXHJcbi5leGFtcGxlLXNlY3Rpb24ge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgYWxpZ24tY29udGVudDogY2VudGVyO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgaGVpZ2h0OiA2MHB4O1xyXG59XHJcblxyXG4uZXhhbXBsZS1tYXJnaW4ge1xyXG4gIG1hcmdpbjogMTBweDtcclxufVxyXG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".mat-slider {\r\n  width: 300px;\r\n}\r\n\r\n.mat-form-field {\r\n  margin-right: 12px;\r\n}\r\n\r\n.example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.example-spacer {\r\n  flex: 1 1 auto;\r\n}\r\n\r\n.example-container {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n.example-sidenav-content {\r\n  display: flex;\r\n  width: 100%;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n.example-sidenav {\r\n  padding: 20px;\r\n}\r\n\r\n.example-card {\r\n  max-width: 400px;\r\n}\r\n\r\n.example-header-image {\r\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\r\n  background-size: cover;\r\n}\r\n\r\n/* maps css */\r\n\r\n.map {\r\n  width: 100%;\r\n  height: 100vh;\r\n}\r\n\r\n/* tabs css */\r\n\r\n.example-small-box, .example-large-box {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin: 16px;\r\n  padding: 16px;\r\n  border-radius: 8px;\r\n  width: 50px;\r\n}\r\n\r\n.example-small-box {\r\n  height: 300px;\r\n  width: 200px;\r\n}\r\n\r\n.example-large-box {\r\n  height: 100px;\r\n  width: 50px;\r\n}\r\n\r\n/* Slide toggle */\r\n\r\n.example-h2 {\r\n  margin: 10px;\r\n}\r\n\r\n.example-section {\r\n  display: flex;\r\n  align-content: center;\r\n  align-items: center;\r\n  height: 60px;\r\n}\r\n\r\n.example-margin {\r\n  margin: 10px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsV0FBVztBQUNiOztBQUVBO0VBQ0UsV0FBVztBQUNiOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsV0FBVztFQUNYLG1CQUFtQjtFQUNuQix1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSxhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxtRkFBbUY7RUFDbkYsc0JBQXNCO0FBQ3hCOztBQUVBLGFBQWE7O0FBQ2I7RUFDRSxXQUFXO0VBQ1gsYUFBYTtBQUNmOztBQUVBLGFBQWE7O0FBQ2I7RUFDRSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHVCQUF1QjtFQUN2QixZQUFZO0VBQ1osYUFBYTtFQUNiLGtCQUFrQjtFQUNsQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsWUFBWTtBQUNkOztBQUVBO0VBQ0UsYUFBYTtFQUNiLFdBQVc7QUFDYjs7QUFFQSxpQkFBaUI7O0FBQ2pCO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHFCQUFxQjtFQUNyQixtQkFBbUI7RUFDbkIsWUFBWTtBQUNkOztBQUVBO0VBQ0UsWUFBWTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LXNsaWRlciB7XHJcbiAgd2lkdGg6IDMwMHB4O1xyXG59XHJcblxyXG4ubWF0LWZvcm0tZmllbGQge1xyXG4gIG1hcmdpbi1yaWdodDogMTJweDtcclxufVxyXG5cclxuLmV4YW1wbGUtZm9ybSB7XHJcbiAgbWluLXdpZHRoOiAxNTBweDtcclxuICBtYXgtd2lkdGg6IDUwMHB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uZXhhbXBsZS1mdWxsLXdpZHRoIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLmV4YW1wbGUtZm9ybSB7XHJcbiAgbWluLXdpZHRoOiAxNTBweDtcclxuICBtYXgtd2lkdGg6IDUwMHB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uZXhhbXBsZS1mdWxsLXdpZHRoIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLmV4YW1wbGUtc3BhY2VyIHtcclxuICBmbGV4OiAxIDEgYXV0bztcclxufVxyXG5cclxuLmV4YW1wbGUtY29udGFpbmVyIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuXHJcbi5leGFtcGxlLXNpZGVuYXYtY29udGVudCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICB3aWR0aDogMTAwJTtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcblxyXG4uZXhhbXBsZS1zaWRlbmF2IHtcclxuICBwYWRkaW5nOiAyMHB4O1xyXG59XHJcblxyXG4uZXhhbXBsZS1jYXJkIHtcclxuICBtYXgtd2lkdGg6IDQwMHB4O1xyXG59XHJcblxyXG4uZXhhbXBsZS1oZWFkZXItaW1hZ2Uge1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnaHR0cHM6Ly9tYXRlcmlhbC5hbmd1bGFyLmlvL2Fzc2V0cy9pbWcvZXhhbXBsZXMvc2hpYmExLmpwZycpO1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbn1cclxuXHJcbi8qIG1hcHMgY3NzICovXHJcbi5tYXAge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwdmg7XHJcbn1cclxuXHJcbi8qIHRhYnMgY3NzICovXHJcbi5leGFtcGxlLXNtYWxsLWJveCwgLmV4YW1wbGUtbGFyZ2UtYm94IHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgbWFyZ2luOiAxNnB4O1xyXG4gIHBhZGRpbmc6IDE2cHg7XHJcbiAgYm9yZGVyLXJhZGl1czogOHB4O1xyXG4gIHdpZHRoOiA1MHB4O1xyXG59XHJcblxyXG4uZXhhbXBsZS1zbWFsbC1ib3gge1xyXG4gIGhlaWdodDogMzAwcHg7XHJcbiAgd2lkdGg6IDIwMHB4O1xyXG59XHJcblxyXG4uZXhhbXBsZS1sYXJnZS1ib3gge1xyXG4gIGhlaWdodDogMTAwcHg7XHJcbiAgd2lkdGg6IDUwcHg7XHJcbn1cclxuXHJcbi8qIFNsaWRlIHRvZ2dsZSAqL1xyXG4uZXhhbXBsZS1oMiB7XHJcbiAgbWFyZ2luOiAxMHB4O1xyXG59XHJcblxyXG4uZXhhbXBsZS1zZWN0aW9uIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGFsaWduLWNvbnRlbnQ6IGNlbnRlcjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIGhlaWdodDogNjBweDtcclxufVxyXG5cclxuLmV4YW1wbGUtbWFyZ2luIHtcclxuICBtYXJnaW46IDEwcHg7XHJcbn0iXX0= */");
 
 /***/ }),
 
@@ -81,6 +81,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/snack-bar.js");
 /* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! firebase */ "./node_modules/firebase/dist/index.esm.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var _replservice_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./replservice.service */ "./src/app/replservice.service.ts");
+/* harmony import */ var polygon_clipping__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! polygon-clipping */ "./node_modules/polygon-clipping/dist/polygon-clipping.umd.js");
+/* harmony import */ var polygon_clipping__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(polygon_clipping__WEBPACK_IMPORTED_MODULE_22__);
+
+
 
 
 
@@ -103,9 +108,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let AppComponent = class AppComponent {
-    constructor(_snackBar, httpClient) {
+    constructor(_snackBar, httpClient, replserviceService) {
         this._snackBar = _snackBar;
         this.httpClient = httpClient;
+        this.replserviceService = replserviceService;
         this.myControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_15__["FormControl"]();
         this.options = ['turnOnGEOJson', 'turnOffGEOJson', 'savePolygons', 'retrievePolygons', 'loadPolygons'];
         this.resetToDefault = () => {
@@ -191,6 +197,59 @@ let AppComponent = class AppComponent {
     ngOnInit() {
         this.filteredOptions = this.myControl.valueChanges
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_16__["startWith"])(''), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_16__["map"])(value => this._filter(value)));
+        $(function () {
+            // 6 create an instance when the DOM is ready
+            function nodeExpand(node) {
+                if (node.children.length === 0)
+                    return Object.assign({ text: node.name }, node);
+                else
+                    for (var i = 0; i < node.children.length; i++) {
+                        node.children[i] = nodeExpand(node.children[i]);
+                    }
+                return Object.assign({ text: node.name }, node);
+            }
+            $(".search-input").keyup(function () {
+                var searchString = $(this).val();
+                $('#atlas_info').jstree('search', searchString);
+            });
+            $.getJSON('https://raw.githubusercontent.com/Sai-Adarsh/viewer-geojson/main/h.json', function (jsonresponse) {
+                var dataNode = nodeExpand(jsonresponse.msg[0]);
+                $('#atlas_info')
+                    .on("changed.jstree", function (e, data) {
+                    if (data.selected.length) {
+                        //alert('The selected node is: ' + data.instance.get_node(data.selected[0]).text);
+                        //console.log(data.selected);
+                        console.log('The selected node is: ' + data.selected[0]); //data.instance.get_node(data.selected[0]).text);
+                        // if(data.selected.length == 1)
+                        //   drawAtlasRegion(data.selected);
+                        // else{
+                        //   failMessage('<h5>Please select only one</h5>');
+                        //   return;
+                        // }
+                    }
+                })
+                    .jstree({
+                    "plugins": ["wholerow", "search"],
+                    'core': {
+                        'themes': {
+                            'name': 'proton',
+                            'responsive': true
+                        },
+                        'multiple': false,
+                        // 'check_callback': true,
+                        'data': function (node, cb) {
+                            if (node.id === '#') {
+                                cb(Object.assign({}, dataNode), dataNode.children);
+                            }
+                        }
+                    },
+                    "search": {
+                        "case_insensitive": true,
+                        "show_only_matches": true
+                    }
+                });
+            });
+        });
     }
     _filter(value) {
         const filterValue = value.toLowerCase();
@@ -303,8 +362,8 @@ let AppComponent = class AppComponent {
             type: "Polygon",
             style: this.styleErase,
         });
-        this.defaultURL = 'http://braincircuits.org/cgi-bin/iipsrv.fcgi?FIF=/PMD2057/PMD2057%262056-F20-2015.03.06-21.13.19_PMD2057_3_0060.jp2&GAM=1&MINMAX=1:0,255&MINMAX=2:0,255&MINMAX=3:0,255&JTL={z},{tileIndex}';
-        this.httpClient.get('http://mitradevel.cshl.org/webtools/seriesbrowser/getthumbnails/4240/').subscribe(res => {
+        this.defaultURL = 'http://braincircuits.org/cgi-bin/iipsrv.fcgi?FIF=/PMD2495/PMD2495%262494-F20-2016.02.26-23.11.41_PMD2495_3_0060.jp2&GAM=1&MINMAX=1:0,255&MINMAX=2:0,255&MINMAX=3:0,255&JTL={z},{tileIndex}';
+        this.httpClient.get('http://mitradevel.cshl.org/webtools/seriesbrowser/getthumbnails/4958/').subscribe(res => {
             this.urlData = res;
         });
         this.zoomifySource = new ol_source_Zoomify__WEBPACK_IMPORTED_MODULE_17__["default"]({
@@ -369,7 +428,7 @@ let AppComponent = class AppComponent {
         this.modifyVector.getSource().clear();
         if (event.checked == true) {
             this.lastChecked = true;
-            this.httpClient.get('http://mitradevel.cshl.org/webtools/seriesbrowser/getatlasgeojson/PMD2057/00' + this.defaultGeoJSONSecNo + '/').subscribe(res => {
+            this.httpClient.get('http://mitradevel.cshl.org/webtools/seriesbrowser/getatlasgeojson/PMD2495/00' + this.defaultGeoJSONSecNo + '/').subscribe(res => {
                 var atlasstyle = new ol_style__WEBPACK_IMPORTED_MODULE_10__["Style"]({
                     fill: new ol_style__WEBPACK_IMPORTED_MODULE_10__["Fill"]({
                         color: 'rgba(255, 255, 255, 0)'
@@ -419,55 +478,69 @@ let AppComponent = class AppComponent {
         this.map.addInteraction(this.erasePolygon);
     }
     combine() {
-        try {
-            var vector_sr = this.vector.getSource();
-            var features = vector_sr.getFeatures();
-            var format = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_14__["default"]();
-            var turfpoly;
-            var polygon;
-            var count = 0;
-            var sty = new ol_style__WEBPACK_IMPORTED_MODULE_10__["Style"]({
-                fill: new ol_style__WEBPACK_IMPORTED_MODULE_10__["Fill"]({
-                    color: 'rgba(0,255,255, 0.1)',
-                }),
-                stroke: new ol_style__WEBPACK_IMPORTED_MODULE_10__["Stroke"]({
-                    color: '#00FFFF',
-                    width: 3,
-                })
-            });
-            var isIntersected = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["polygon"]([]);
-            for (var i = 0; i < features.length; i++) {
-                turfpoly = format.writeFeatureObject(features[i]);
-                if (count > 0) {
-                    if (features[i].get('name') == "add") {
-                        var uid = features[i].ol_uid;
-                        vector_sr.removeFeature(vector_sr.getFeatureByUid(uid));
-                        polygon = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["union"](polygon, turfpoly);
-                    }
-                    else if (count > 0 && features[i].get('name') == "erase") {
-                        var uid = features[i].ol_uid;
-                        vector_sr.removeFeature(vector_sr.getFeatureByUid(uid));
-                        polygon = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["difference"](polygon, turfpoly);
-                    }
-                }
-                else {
+        var vector_sr = this.vector.getSource();
+        var features = vector_sr.getFeatures();
+        var format = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_14__["default"]();
+        var turfpoly;
+        var polygon;
+        var count = 0;
+        var sty = new ol_style__WEBPACK_IMPORTED_MODULE_10__["Style"]({
+            fill: new ol_style__WEBPACK_IMPORTED_MODULE_10__["Fill"]({
+                color: 'rgba(0,255,255, 0.1)',
+            }),
+            stroke: new ol_style__WEBPACK_IMPORTED_MODULE_10__["Stroke"]({
+                color: '	#00FFFF',
+                width: 3,
+            })
+        });
+        var last = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["polygon"]([]);
+        for (var i = 0; i < features.length; i++) {
+            turfpoly = format.writeFeatureObject(features[i]);
+            if (count > 0) {
+                if (features[i].get('name') == "add") {
                     var uid = features[i].ol_uid;
                     vector_sr.removeFeature(vector_sr.getFeatureByUid(uid));
-                    polygon = format.writeFeatureObject(features[i]);
-                    count = count + 1;
+                    //console.log(isIntersected," check");
+                    polygon = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["union"](polygon, turfpoly);
+                }
+                else if (count > 0 && features[i].get('name') == "erase") {
+                    var uid = features[i].ol_uid;
+                    vector_sr.removeFeature(vector_sr.getFeatureByUid(uid));
+                    last = polygon;
+                    polygon = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["difference"](polygon, turfpoly);
+                    if (polygon == null) {
+                        //console.log(turf.getCoords(polygon)[0],"points");
+                        //var points = turf.points(turf.getCoords(polygon)[0]);
+                        //var len = points.features.length;
+                        //if(false && turf.pointsWithinPolygon(points,turfpoly).features.length==len){
+                        //  polygon = turf.difference(polygon,turfpoly);
+                        //}
+                        //else{
+                        //polygon = turf.difference(turf.toWgs84(polygon),turf.toWgs84(turfpoly));//
+                        var poly1 = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["getCoords"](last);
+                        var poly2 = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["getCoords"](turfpoly);
+                        var polyDiff;
+                        polyDiff = polygon_clipping__WEBPACK_IMPORTED_MODULE_22__["difference"](poly1, poly2);
+                        polyDiff = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["multiPolygon"](polyDiff);
+                        polygon = polyDiff;
+                        //} 
+                    }
                 }
             }
-            if (count > 0) {
-                polygon = format.readFeatures(polygon)[0];
-                polygon.setStyle(sty);
-                vector_sr.addFeature(polygon);
+            else {
+                var uid = features[i].ol_uid;
+                vector_sr.removeFeature(vector_sr.getFeatureByUid(uid));
+                polygon = format.writeFeatureObject(features[i]);
+                count = count + 1;
             }
-            console.log(vector_sr);
-            this.vector.setSource(vector_sr);
         }
-        catch (error) {
-            console.log("Select region inside added polygon");
+        if (count > 0 && polygon != null) {
+            polygon = format.readFeatures(polygon)[0];
+            polygon.setStyle(sty);
+            vector_sr.addFeature(polygon);
         }
+        //console.log(vector_sr.getFeatures());
+        this.vector.setSource(vector_sr);
     }
     addInteraction(interactionType) {
         this.draw.setActive(true);
@@ -514,7 +587,7 @@ let AppComponent = class AppComponent {
     }
     brainIDUpdated() {
         this.modifyVector.setVisible(false);
-        this.httpClient.get('http://mitradevel.cshl.org/webtools/seriesbrowser/getthumbnails/4240/').subscribe(res => {
+        this.httpClient.get('http://mitradevel.cshl.org/webtools/seriesbrowser/getthumbnails/4958/').subscribe(res => {
             this.urlData = res;
             console.log(res);
             var newURL = "http://braincircuits.org/cgi-bin/iipsrv.fcgi?FIF=" + this.urlData.F[this.secNo][1].split('/brainimg')[1].replace("&", "%26").replace("jpg", "jp2") + "&GAM=1&MINMAX=1:0,255&MINMAX=2:0,255&MINMAX=3:0,255&JTL={z},{tileIndex}";
@@ -530,7 +603,7 @@ let AppComponent = class AppComponent {
         });
         console.log(this.lastChecked, this.defaultGeoJSONSecNo);
         if (this.lastChecked == true) {
-            this.httpClient.get('http://mitradevel.cshl.org/webtools/seriesbrowser/getatlasgeojson/PMD2057/00' + this.defaultGeoJSONSecNo + '/').subscribe(res => {
+            this.httpClient.get('http://mitradevel.cshl.org/webtools/seriesbrowser/getatlasgeojson/PMD2495/00' + this.defaultGeoJSONSecNo + '/').subscribe(res => {
                 var atlasstyle = new ol_style__WEBPACK_IMPORTED_MODULE_10__["Style"]({
                     fill: new ol_style__WEBPACK_IMPORTED_MODULE_10__["Fill"]({
                         color: 'rgba(255, 255, 255, 0)'
@@ -566,7 +639,7 @@ let AppComponent = class AppComponent {
     }
     onToggleTracer(event) {
         if (event.checked == true) {
-            this.httpClient.get('http://mitradevel.cshl.org/webtools/seriesbrowser/getthumbnails/4240/').subscribe(res => {
+            this.httpClient.get('http://mitradevel.cshl.org/webtools/seriesbrowser/getthumbnails/4958/').subscribe(res => {
                 this.urlData = res;
                 console.log(res);
                 var newURL = "http://braincircuits.org/cgi-bin/iipsrv.fcgi?FIF=" + this.urlData.N[this.secNo][1].split('/brainimg')[1].replace("&", "%26").replace("jpg", "jp2") + "&GAM=1&MINMAX=1:0,255&MINMAX=2:0,255&MINMAX=3:0,255&JTL={z},{tileIndex}";
@@ -583,7 +656,7 @@ let AppComponent = class AppComponent {
             console.log(this.defaultURL, this.urlData);
         }
         else {
-            this.httpClient.get('http://mitradevel.cshl.org/webtools/seriesbrowser/getthumbnails/4240/').subscribe(res => {
+            this.httpClient.get('http://mitradevel.cshl.org/webtools/seriesbrowser/getthumbnails/4958/').subscribe(res => {
                 this.urlData = res;
                 console.log(res);
                 var newURL = "http://braincircuits.org/cgi-bin/iipsrv.fcgi?FIF=" + this.urlData.F[this.secNo][1].split('/brainimg')[1].replace("&", "%26").replace("jpg", "jp2") + "&GAM=1&MINMAX=1:0,255&MINMAX=2:0,255&MINMAX=3:0,255&JTL={z},{tileIndex}";
@@ -625,10 +698,21 @@ let AppComponent = class AppComponent {
             this.loadPolygonsFromFirebase();
         }
     }
+    Tree(event) {
+        this.httpClient.get('https://raw.githubusercontent.com/Sai-Adarsh/viewer-geojson/main/h.json').subscribe(res => {
+            console.log("here", res);
+            this.treeString = [];
+            this.treeString.push(res);
+        });
+    }
+    PrintTree() {
+        console.log("Print Tree", typeof this.treeString[0]["msg"], this.treeString[0]["msg"]);
+    }
 };
 AppComponent.ctorParameters = () => [
     { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_18__["MatSnackBar"] },
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_20__["HttpClient"] }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_20__["HttpClient"] },
+    { type: _replservice_service__WEBPACK_IMPORTED_MODULE_21__["ReplserviceService"] }
 ];
 AppComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -672,6 +756,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 /* harmony import */ var _angular_material_slider__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/slider */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/slider.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var _angular_material_tree__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/tree */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tree.js");
+
 
 
 
@@ -717,12 +803,44 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_16__["MatSnackBarModule"],
             _angular_material_form_field__WEBPACK_IMPORTED_MODULE_17__["MatFormFieldModule"],
             _angular_material_slider__WEBPACK_IMPORTED_MODULE_18__["MatSliderModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpClientModule"]
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpClientModule"],
+            _angular_material_tree__WEBPACK_IMPORTED_MODULE_20__["MatTreeModule"],
         ],
-        providers: [],
+        providers: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/replservice.service.ts":
+/*!****************************************!*\
+  !*** ./src/app/replservice.service.ts ***!
+  \****************************************/
+/*! exports provided: ReplserviceService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReplserviceService", function() { return ReplserviceService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+let ReplserviceService = class ReplserviceService {
+    constructor() { }
+    REPLTest() {
+        return "Hello";
+    }
+};
+ReplserviceService.ctorParameters = () => [];
+ReplserviceService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], ReplserviceService);
 
 
 
