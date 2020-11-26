@@ -238,11 +238,14 @@ let AppComponent = class AppComponent {
                     }
                 })
                     .jstree({
-                    "plugins": ["wholerow", "search"],
+                    "plugins": ["search"],
                     'core': {
                         'themes': {
                             'name': 'proton',
-                            'responsive': true
+                            'responsive': true,
+                            'icons': false,
+                            'variant': 'large',
+                            'dots': true,
                         },
                         'multiple': false,
                         // 'check_callback': true,
@@ -379,7 +382,7 @@ let AppComponent = class AppComponent {
         });
         this.zoomifySource = new ol_source_Zoomify__WEBPACK_IMPORTED_MODULE_17__["default"]({
             url: this.defaultURL,
-            size: [24000, 18000],
+            size: [24000, 24000],
             crossOrigin: 'anonymous',
             zDirection: -1,
         });
@@ -610,7 +613,7 @@ let AppComponent = class AppComponent {
             var newURL = "http://braincircuits.org/cgi-bin/iipsrv.fcgi?FIF=" + this.urlData.F[this.secNo][1].split('/brainimg')[1].replace("&", "%26").replace("jpg", "jp2") + "&GAM=1&MINMAX=1:0,255&MINMAX=2:0,255&MINMAX=3:0,255&JTL={z},{tileIndex}";
             this.zoomifySource = new ol_source_Zoomify__WEBPACK_IMPORTED_MODULE_17__["default"]({
                 url: newURL,
-                size: [24000, 24000],
+                size: [24000, 18000],
                 crossOrigin: 'anonymous',
                 zDirection: -1,
             });
@@ -949,7 +952,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\MSI\next-gen-viewer\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\saiadarsh\Desktop\htic\gitcopy\dist-creator\next-gen-viewer\src\main.ts */"./src/main.ts");
 
 
 /***/ })
