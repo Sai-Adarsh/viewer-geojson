@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n\t<mat-sidenav-container class=\"example-container\">\r\n    <!--\r\n\t\t<mat-sidenav #sidenav7 mode=\"side\" position=\"end\" role=\"navigation\" class=\"example-sidenav\">\r\n        <br /><br />\r\n        <mat-card-header>\r\n          <mat-card-title>Development Tools</mat-card-title>\r\n        </mat-card-header><p> </p>\r\n        <button (click)=\"this.deleteDrawing()\" mat-raised-button>\r\n          <mat-icon>undo</mat-icon>\r\n        </button>&nbsp;\r\n        <button (click)=\"this.redoDrawing()\" mat-raised-button>\r\n          <mat-icon>redo</mat-icon>\r\n        </button>&nbsp;\r\n        <button color=\"accent\" (click)=\"sidenav1.toggle(); sidenav7.toggle()\" mat-raised-button>\r\n          Toggle <mat-icon>toggle_off</mat-icon>\r\n        </button><p> </p>\r\n        <mat-accordion>\r\n          <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                              (closed)=\"panelOpenState = false\">\r\n            <mat-expansion-panel-header>\r\n              <mat-panel-title>\r\n                Colour Intensity\r\n              </mat-panel-title>\r\n            </mat-expansion-panel-header>\r\n            <button (click)=\"resetToDefault()\" color=\"primary\" mat-raised-button>\r\n              Reset to default\r\n            </button><p> </p>\r\n            Invert\r\n            <mat-slider\r\n              thumbLabel\r\n              (change)=\"this.onInvertChange($event)\"\r\n              min=\"1\"\r\n              max=\"100\"></mat-slider><p> </p>\r\n            Hue\r\n            <mat-slider\r\n              thumbLabel\r\n              (change)=\"this.onHueChange($event)\"\r\n              min=\"0\"\r\n              max=\"360\"></mat-slider><p> </p>\r\n            Saturation\r\n            <mat-slider\r\n              thumbLabel\r\n              (change)=\"this.onSaturationChange($event)\"\r\n              min=\"1\"\r\n              max=\"100\"></mat-slider><p> </p>\r\n          </mat-expansion-panel>\r\n        </mat-accordion><p> </p>\r\n    </mat-sidenav>-->\r\n    \r\n    <mat-sidenav #sidenav1 opened mode=\"side\" position=\"end\" role=\"navigation\" class=\"example-sidenav\">\r\n      <center>\r\n        <button mat-icon-button color=\"accent\">\r\n          <mat-icon>build</mat-icon>\r\n        </button>\r\n      </center><p> </p>\r\n      \r\n      <hr style=\"height:2px;border-width:0;color:gray;background-color:gray\"><p> </p>\r\n      <!--<button mat-mini-fab color=\"accent\" (click)=\"sidenav1.toggle(); sidenav7.toggle()\" mat-raised-button>\r\n        <mat-icon>toggle_on</mat-icon>\r\n      </button><p> </p>-->\r\n      <mat-accordion>\r\n        <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Annotation Tools');\"\r\n                            (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n          <mat-expansion-panel-header>\r\n            <mat-panel-title>\r\n              <mat-icon>create</mat-icon>\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Point Annotation');\"  (mouseleave) =\"this.changeHeaderTest('Annotation Tools');\" (click)=\"this.addInteraction('Point')\" mat-raised-button>\r\n            <mat-icon>group_work</mat-icon>\r\n          </button><p> </p>\r\n          <button (mouseenter) =\"this.changeHeaderTest('LineString');\"  (mouseleave) =\"this.changeHeaderTest('Annotation Tools');\" (click)=\"this.addInteraction('LineString')\" mat-raised-button>\r\n            <mat-icon>clear_all</mat-icon>\r\n          </button><p> </p>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Polygon');\"  (mouseleave) =\"this.changeHeaderTest('Annotation Tools');\" (click)=\"this.addInteraction('Polygon')\" mat-raised-button>\r\n            <mat-icon>change_history</mat-icon>\r\n          </button><p> </p>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Circle');\"  (mouseleave) =\"this.changeHeaderTest('Annotation Tools');\" (click)=\"this.addInteraction('Circle')\" mat-raised-button>\r\n            <mat-icon>circle</mat-icon>\r\n          </button><p> </p>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Remove Interaction');\"  (mouseleave) =\"this.changeHeaderTest('Annotation Tools');\" (click)=\"this.removeInteraction()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n              <mat-icon>clear</mat-icon>\r\n          </button><p> </p>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Delete Annotations');\"  (mouseleave) =\"this.changeHeaderTest('Annotation Tools');\" (click)=\"this.deleteDrawing()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n              <mat-icon>delete</mat-icon>\r\n          </button>\r\n        </mat-expansion-panel><p> </p>\r\n\r\n        <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Union & Difference');\"\r\n                            (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n          <mat-expansion-panel-header>\r\n            <mat-panel-title>\r\n              <mat-icon>add_circle</mat-icon>\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Add Polygon');\"  (mouseleave) =\"this.changeHeaderTest('Union & Difference');\"  (click)=\"this.addPolygons()\" mat-raised-button>\r\n            <mat-icon>add_circle</mat-icon>\r\n          </button><p> </p>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Erase Polygon');\"  (mouseleave) =\"this.changeHeaderTest('Union & Difference');\" (click)=\"this.erasePolygons()\" mat-raised-button>\r\n            <mat-icon>remove_circle</mat-icon>\r\n          </button><p> </p>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Combine');\"  (mouseleave) =\"this.changeHeaderTest('Union & Difference');\"(click)=\"this.combine()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n            <mat-icon>swap_horizontal</mat-icon>\r\n          </button>\r\n        </mat-expansion-panel><p> </p>\r\n\r\n          <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Save & Load');\"\r\n          (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n            <mat-expansion-panel-header>\r\n            <mat-panel-title>\r\n              <mat-icon> cloud</mat-icon>\r\n            </mat-panel-title>\r\n            </mat-expansion-panel-header>\r\n              <button (mouseenter) =\"this.changeHeaderTest('Save Polygon');\"  (mouseleave) =\"this.changeHeaderTest('Save & Load');\"  (click)=\"openSnackBar('Saving Polygons to firebase', 'Dismiss'); savePolygonsToFirebase()\" mat-raised-button>\r\n                <mat-icon>cloud_import</mat-icon>\r\n              </button><p> </p>\r\n              <button (mouseenter) =\"this.changeHeaderTest('Retrieve Polygon');\"  (mouseleave) =\"this.changeHeaderTest('Save & Load');\" (click)=\"retrievePolygonsFromFirebase(); openSnackBar('Retrieving Polygons to firebase', 'Dismiss')\" mat-raised-button>\r\n                <mat-icon>cloud_download</mat-icon>\r\n              </button><p> </p>\r\n              <!--\r\n              <button (mouseenter) =\"this.changeHeaderTest('Load Polygon');\"  (mouseleave) =\"this.changeHeaderTest('Save & Load');\" (click)=\"loadPolygonsFromFirebase()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n                <mat-icon>publish</mat-icon>\r\n              </button>\r\n              -->\r\n              \r\n          </mat-expansion-panel><p> </p>\r\n\r\n\r\n          <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Import & Export');\"\r\n          (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n            <mat-expansion-panel-header>\r\n            <mat-panel-title>\r\n              <mat-icon>folder</mat-icon>\r\n            </mat-panel-title>\r\n            </mat-expansion-panel-header>\r\n              <input #file type=\"file\" style=\"display:none;\" (change)=\"this.importFile($event)\" />\r\n              <button (mouseenter) =\"this.changeHeaderTest('Import Features');\"  (mouseleave) =\"this.changeHeaderTest('Import & Export');\"  (click)=\"openSnackBar('Importing', 'Dismiss'); file.click();\" mat-raised-button>\r\n                <mat-icon>create_new_folder</mat-icon>\r\n              </button><p> </p>\r\n              <button (mouseenter) =\"this.changeHeaderTest('Export Features');\"  (mouseleave) =\"this.changeHeaderTest('Import & Export');\" (click)=\"openSnackBar('Exporting', 'Dismiss'); this.exportFile();\" mat-raised-button>\r\n                <mat-icon>cloud_download</mat-icon>\r\n              </button><p> </p>\r\n              <!--\r\n              <button (mouseenter) =\"this.changeHeaderTest('Load Polygon');\"  (mouseleave) =\"this.changeHeaderTest('Save & Load');\" (click)=\"loadPolygonsFromFirebase()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n                <mat-icon>publish</mat-icon>\r\n              </button>\r\n              -->\r\n              \r\n          </mat-expansion-panel><p> </p>\r\n\r\n      </mat-accordion>\r\n    </mat-sidenav>\r\n\r\n\t\t<mat-sidenav-content>\r\n\t\t\t<mat-sidenav-container class=\"example-map-container\">\r\n\t\t\t\t<mat-sidenav #sidenav2 mode=\"side\" position=\"start\" role=\"navigation\" class=\"example-sidenav\">\r\n\r\n\t\t\t\t\t<div fxLayout=\"column\" class=\"sidenav-normal\">\r\n            <center>\r\n              <button mat-fab color=\"primary\" (click)=\"sidenav2.toggle()\">\r\n                <mat-icon>menu</mat-icon>\r\n              </button>\r\n            </center><br />\r\n            <mat-accordion>\r\n              <mat-expansion-panel #panel1 (opened)=\"panelOpenState = true; this.changeHeaderTest('Brain Information');\"\r\n                                   (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Brain Information\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n                <br>\r\n                <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Series ID</mat-label>\r\n                  <input (change)=\"this.getBrainIDUpdated($event)\"matInput placeholder=\"E.g. 4240\">\r\n                </mat-form-field>\r\n                <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Section No</mat-label>\r\n                  <input (change)=\"this.emailUpdated($event)\" matInput placeholder=\"E.g. 25\">\r\n                </mat-form-field><p> </p>\r\n                <form>\r\n                  <mat-form-field appearance=\"fill\">\r\n                    <mat-label>Select Tracer</mat-label>\r\n                    <mat-select [(ngModel)]=\"selectedValue\" name=\"tracer\">\r\n                      <mat-option *ngFor=\"let tracer of tracers\" [value]=\"tracer.value\">\r\n                        {{tracer.viewValue}}\r\n                      </mat-option>\r\n                    </mat-select>\r\n                  </mat-form-field>\r\n                </form>\r\n                <!--\r\n                  <mat-slide-toggle\r\n                      color=\"primary\"\r\n                      (change)=\"this.onToggleTracer($event)\"\r\n                      class=\"example-margin\"\r\n                      [checked]=\"checked\"\r\n                      [disabled]=\"disabled\">\r\n                    Toggle Tracer\r\n                  </mat-slide-toggle>\r\n                -->          \r\n                <mat-card-actions>\r\n                  <button (click)=\"this.brainIDUpdated()\" color=\"primary\" mat-raised-button>Load Brain</button>\r\n                </mat-card-actions><p> </p>\r\n                <br>\r\n              </mat-expansion-panel><p></p>\r\n              <mat-expansion-panel #panel2 (opened)=\"panelOpenState = true; this.changeHeaderTest('Atlas');\"\r\n                                   (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Atlas\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n                <!--\r\n                  <button (click)=\"this.displayFeatures();\" mat-raised-button>\r\n                    <mat-icon>cloud_download</mat-icon>\r\n                  </button><p> </p>\r\n                -->\r\n                <div class=\"menu-overflow-hidden\" id=\"jstree_block\" style=\"height: calc(50% - 2px); margin-left: 10px;\">\r\n                  <div class=\"active-pink-3 active-pink-4 mb-4\">\r\n                      <mat-form-field appearance=\"outline\">\r\n                        <mat-label>Region Name</mat-label>\r\n                        <input class=\"form-control search-input\" (change)=\"this.Tree($event);\" matInput placeholder=\"E.g. Hypothalamus\">\r\n                      </mat-form-field>\r\n                   </div>\r\n                  <div style=\"white-space: nowrap; font-family: 'Big Shoulders Stencil Display', cursive; font-family: 'Roboto', sans-serif;\" id='atlas_info'></div>\r\n                </div>\r\n              </mat-expansion-panel><p></p>\r\n              <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Injection Region');\"\r\n                                   (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Injection Region\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n              </mat-expansion-panel><p></p>\r\n              <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Process Annotation');\"\r\n                                   (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Process Annotation\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n              </mat-expansion-panel><p></p>\r\n              <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Point Annotation');\"\r\n                                   (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Point Annotation\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n              </mat-expansion-panel><p></p>\r\n              \r\n                  <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Development Tools');\"\r\n                                      (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n                    <mat-expansion-panel-header>\r\n                      <mat-panel-title>\r\n                        Development Tools\r\n                      </mat-panel-title>\r\n                    </mat-expansion-panel-header>\r\n                    <mat-accordion>\r\n                      <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Development Tool | REPL');\"\r\n                                      (closed)=\"panelOpenState = false; this.changeHeaderTest('Development Tool');\">\r\n                    <mat-expansion-panel-header>\r\n                      <mat-panel-title>\r\n                        REPL\r\n                      </mat-panel-title>\r\n                    </mat-expansion-panel-header>\r\n                    <mat-card-content>\r\n                      <form>\r\n                        <mat-form-field mat-form-field appearance=\"standard\">\r\n                          <input type=\"text\"\r\n                                id = \"replID\"\r\n                                placeholder=\"Command line\"\r\n                                aria-label=\"Number\"\r\n                                matInput\r\n                                [formControl]=\"myControl\"\r\n                                [matAutocomplete]=\"auto\">\r\n                          <mat-autocomplete #auto=\"matAutocomplete\">\r\n                            <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\r\n                              {{option}}\r\n                            </mat-option>\r\n                          </mat-autocomplete>\r\n                        </mat-form-field>\r\n                      </form>\r\n                      <mat-card-actions>\r\n                        <button color=\"primary\" (click)=\"this.REPL()\" mat-raised-button>Run Command</button>\r\n                      </mat-card-actions>\r\n                    </mat-card-content>\r\n                  </mat-expansion-panel><p> </p>\r\n\r\n                  <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Development Tool | Colour Intensity');\"\r\n                                (closed)=\"panelOpenState = false; this.changeHeaderTest('Development Tool');\">\r\n                    <mat-expansion-panel-header>\r\n                      <mat-panel-title>\r\n                        Colour Intensity\r\n                      </mat-panel-title>\r\n                    </mat-expansion-panel-header>\r\n                    <button (click)=\"resetToDefault()\" color=\"primary\" mat-raised-button>\r\n                      Reset to default\r\n                    </button><p> </p>\r\n                    Invert\r\n                    <mat-slider\r\n                      thumbLabel\r\n                      (change)=\"this.onInvertChange($event)\"\r\n                      min=\"1\"\r\n                      max=\"100\"></mat-slider><p> </p>\r\n                    Hue\r\n                    <mat-slider\r\n                      thumbLabel\r\n                      (change)=\"this.onHueChange($event)\"\r\n                      min=\"0\"\r\n                      max=\"360\"></mat-slider><p> </p>\r\n                    Saturation\r\n                    <mat-slider\r\n                      thumbLabel\r\n                      (change)=\"this.onSaturationChange($event)\"\r\n                      min=\"1\"\r\n                      max=\"100\"></mat-slider><p> </p>\r\n                  </mat-expansion-panel><p> </p>\r\n\r\n                  <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Development Tool | Layers');\"\r\n                                   (closed)=\"panelOpenState = false; this.changeHeaderTest('Development Tool');\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Layers\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n                <mat-slide-toggle\r\n                    color=\"primary\"\r\n                    (change)=\"this.onToggle($event)\"\r\n                    class=\"example-margin\"\r\n                    [checked]=\"checked\"\r\n                    [disabled]=\"disabled\">\r\n                  GeoJSON\r\n                </mat-slide-toggle><p> </p>\r\n              </mat-expansion-panel><p></p>\r\n                </mat-accordion>\r\n              </mat-expansion-panel><p> </p>\r\n\r\n\r\n              \r\n            </mat-accordion><p> </p>\r\n\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t</mat-sidenav>\r\n\t\t\t\t<mat-sidenav-content>\r\n\t\t\t\t\t<mat-toolbar role=\"toolbar\" class=\"main-header mat-elevation-z1 sticky-header\">\r\n              <button mat-icon-button class=\"example-icon\" (click)=\"sidenav2.toggle()\"  aria-label=\"Example icon-button with menu icon\">\r\n                <mat-icon>menu</mat-icon>\r\n              </button>\r\n              <span>Next Gen Viewer</span>&nbsp;&nbsp;\r\n              <mat-chip-list aria-label=\"Fish selection\">\r\n                <mat-chip>{{ this.headerTest }}</mat-chip>\r\n              </mat-chip-list>\r\n              <!--<button (click)=\"this.deleteDrawing()\" mat-raised-button>\r\n                <mat-icon>undo</mat-icon>\r\n              </button>&nbsp;\r\n              <button (click)=\"this.redoDrawing()\" mat-raised-button>\r\n                <mat-icon>redo</mat-icon>\r\n              </button>&nbsp;\r\n              <button color=\"accent\" (click)=\"sidenav1.toggle(); sidenav7.toggle()\" mat-raised-button>\r\n                Toggle <mat-icon>settings</mat-icon>\r\n              </button>&nbsp;-->\r\n              <span class=\"example-spacer\"></span>\r\n              <p>  </p>\r\n              <button mat-icon-button class=\"example-icon\" aria-label=\"Example icon-button with share icon\">\r\n              <mat-icon>share</mat-icon>\r\n              </button>\r\n\t\t\t\t\t</mat-toolbar>\r\n\r\n          <div class=\"example-sidenav-content\">\r\n            <div id=\"map\" class=\"map\"></div>\r\n          </div> \r\n\r\n\t\t\t\t</mat-sidenav-content>\r\n\t\t\t</mat-sidenav-container>\r\n\t\t</mat-sidenav-content>\r\n\t</mat-sidenav-container>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n\t<mat-sidenav-container class=\"example-container\">\r\n    <!--\r\n\t\t<mat-sidenav #sidenav7 mode=\"side\" position=\"end\" role=\"navigation\" class=\"example-sidenav\">\r\n        <br /><br />\r\n        <mat-card-header>\r\n          <mat-card-title>Development Tools</mat-card-title>\r\n        </mat-card-header><p> </p>\r\n        <button (click)=\"this.deleteDrawing()\" mat-raised-button>\r\n          <mat-icon>undo</mat-icon>\r\n        </button>&nbsp;\r\n        <button (click)=\"this.redoDrawing()\" mat-raised-button>\r\n          <mat-icon>redo</mat-icon>\r\n        </button>&nbsp;\r\n        <button color=\"accent\" (click)=\"sidenav1.toggle(); sidenav7.toggle()\" mat-raised-button>\r\n          Toggle <mat-icon>toggle_off</mat-icon>\r\n        </button><p> </p>\r\n        <mat-accordion>\r\n          <mat-expansion-panel (opened)=\"panelOpenState = true\"\r\n                              (closed)=\"panelOpenState = false\">\r\n            <mat-expansion-panel-header>\r\n              <mat-panel-title>\r\n                Colour Intensity\r\n              </mat-panel-title>\r\n            </mat-expansion-panel-header>\r\n            <button (click)=\"resetToDefault()\" color=\"primary\" mat-raised-button>\r\n              Reset to default\r\n            </button><p> </p>\r\n            Invert\r\n            <mat-slider\r\n              thumbLabel\r\n              (change)=\"this.onInvertChange($event)\"\r\n              min=\"1\"\r\n              max=\"100\"></mat-slider><p> </p>\r\n            Hue\r\n            <mat-slider\r\n              thumbLabel\r\n              (change)=\"this.onHueChange($event)\"\r\n              min=\"0\"\r\n              max=\"360\"></mat-slider><p> </p>\r\n            Saturation\r\n            <mat-slider\r\n              thumbLabel\r\n              (change)=\"this.onSaturationChange($event)\"\r\n              min=\"1\"\r\n              max=\"100\"></mat-slider><p> </p>\r\n          </mat-expansion-panel>\r\n        </mat-accordion><p> </p>\r\n    </mat-sidenav>-->\r\n    \r\n    <mat-sidenav #sidenav1 opened mode=\"side\" position=\"end\" role=\"navigation\" class=\"example-sidenav\">\r\n      <center>\r\n        <button mat-icon-button color=\"accent\">\r\n          <mat-icon>build</mat-icon>\r\n        </button>\r\n      </center><p> </p>\r\n      \r\n      <hr style=\"height:2px;border-width:0;color:gray;background-color:gray\"><p> </p>\r\n      <!--<button mat-mini-fab color=\"accent\" (click)=\"sidenav1.toggle(); sidenav7.toggle()\" mat-raised-button>\r\n        <mat-icon>toggle_on</mat-icon>\r\n      </button><p> </p>-->\r\n      <mat-accordion>\r\n        <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Annotation Tools');\"\r\n                            (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n          <mat-expansion-panel-header>\r\n            <mat-panel-title>\r\n              <mat-icon>create</mat-icon>\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Point Annotation');\"  (mouseleave) =\"this.changeHeaderTest('Annotation Tools');\" (click)=\"this.addInteraction('Point')\" mat-raised-button>\r\n            <mat-icon>group_work</mat-icon>\r\n          </button><p> </p>\r\n          <button (mouseenter) =\"this.changeHeaderTest('LineString');\"  (mouseleave) =\"this.changeHeaderTest('Annotation Tools');\" (click)=\"this.addInteraction('LineString')\" mat-raised-button>\r\n            <mat-icon>clear_all</mat-icon>\r\n          </button><p> </p>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Polygon');\"  (mouseleave) =\"this.changeHeaderTest('Annotation Tools');\" (click)=\"this.addpixelpolyfun()\" mat-raised-button>\r\n            <mat-icon>change_history</mat-icon>\r\n          </button><p> </p>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Circle');\"  (mouseleave) =\"this.changeHeaderTest('Annotation Tools');\" (click)=\"this.addInteraction('Circle')\" mat-raised-button>\r\n            <mat-icon>circle</mat-icon>\r\n          </button><p> </p>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Remove Interaction');\"  (mouseleave) =\"this.changeHeaderTest('Annotation Tools');\" (click)=\"this.removeInteraction()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n              <mat-icon>clear</mat-icon>\r\n          </button><p> </p>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Delete Annotations');\"  (mouseleave) =\"this.changeHeaderTest('Annotation Tools');\" (click)=\"this.deleteDrawing()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n              <mat-icon>delete</mat-icon>\r\n          </button>\r\n        </mat-expansion-panel><p> </p>\r\n\r\n        <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Union & Difference');\"\r\n                            (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n          <mat-expansion-panel-header>\r\n            <mat-panel-title>\r\n              <mat-icon>add_circle</mat-icon>\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Add Polygon');\"  (mouseleave) =\"this.changeHeaderTest('Union & Difference');\"  (click)=\"this.addPolygons()\" mat-raised-button>\r\n            <mat-icon>add_circle</mat-icon>\r\n          </button><p> </p>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Erase Polygon');\"  (mouseleave) =\"this.changeHeaderTest('Union & Difference');\" (click)=\"this.erasePolygons()\" mat-raised-button>\r\n            <mat-icon>remove_circle</mat-icon>\r\n          </button><p> </p>\r\n          <button (mouseenter) =\"this.changeHeaderTest('Combine');\"  (mouseleave) =\"this.changeHeaderTest('Union & Difference');\"(click)=\"this.combine()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n            <mat-icon>swap_horizontal</mat-icon>\r\n          </button>\r\n        </mat-expansion-panel><p> </p>\r\n\r\n          <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Save & Load');\"\r\n          (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n            <mat-expansion-panel-header>\r\n            <mat-panel-title>\r\n              <mat-icon> cloud</mat-icon>\r\n            </mat-panel-title>\r\n            </mat-expansion-panel-header>\r\n              <button (mouseenter) =\"this.changeHeaderTest('Save Polygon');\"  (mouseleave) =\"this.changeHeaderTest('Save & Load');\"  (click)=\"openSnackBar('Saving Polygons to firebase', 'Dismiss'); savePolygonsToFirebase()\" mat-raised-button>\r\n                <mat-icon>cloud_import</mat-icon>\r\n              </button><p> </p>\r\n              <button (mouseenter) =\"this.changeHeaderTest('Retrieve Polygon');\"  (mouseleave) =\"this.changeHeaderTest('Save & Load');\" (click)=\"retrievePolygonsFromFirebase(); openSnackBar('Retrieving Polygons to firebase', 'Dismiss')\" mat-raised-button>\r\n                <mat-icon>cloud_download</mat-icon>\r\n              </button><p> </p>\r\n              <!--\r\n              <button (mouseenter) =\"this.changeHeaderTest('Load Polygon');\"  (mouseleave) =\"this.changeHeaderTest('Save & Load');\" (click)=\"loadPolygonsFromFirebase()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n                <mat-icon>publish</mat-icon>\r\n              </button>\r\n              -->\r\n              \r\n          </mat-expansion-panel><p> </p>\r\n\r\n\r\n          <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Import & Export');\"\r\n          (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n            <mat-expansion-panel-header>\r\n            <mat-panel-title>\r\n              <mat-icon>folder</mat-icon>\r\n            </mat-panel-title>\r\n            </mat-expansion-panel-header>\r\n              <input #file type=\"file\" style=\"display:none;\" (change)=\"this.importFile($event)\" />\r\n              <button (mouseenter) =\"this.changeHeaderTest('Import Features');\"  (mouseleave) =\"this.changeHeaderTest('Import & Export');\"  (click)=\"openSnackBar('Importing', 'Dismiss'); file.click();\" mat-raised-button>\r\n                <mat-icon>create_new_folder</mat-icon>\r\n              </button><p> </p>\r\n              <button (mouseenter) =\"this.changeHeaderTest('Export Features');\"  (mouseleave) =\"this.changeHeaderTest('Import & Export');\" (click)=\"openSnackBar('Exporting', 'Dismiss'); this.exportFile();\" mat-raised-button>\r\n                <mat-icon>cloud_download</mat-icon>\r\n              </button><p> </p>\r\n              <!--\r\n              <button (mouseenter) =\"this.changeHeaderTest('Load Polygon');\"  (mouseleave) =\"this.changeHeaderTest('Save & Load');\" (click)=\"loadPolygonsFromFirebase()\" mat-raised-button color=\"primary\" aria-label=\"Example icon button with a menu icon\">\r\n                <mat-icon>publish</mat-icon>\r\n              </button>\r\n              -->\r\n              \r\n          </mat-expansion-panel><p> </p>\r\n\r\n      </mat-accordion>\r\n    </mat-sidenav>\r\n\r\n\t\t<mat-sidenav-content>\r\n\t\t\t<mat-sidenav-container class=\"example-map-container\">\r\n\t\t\t\t<mat-sidenav #sidenav2 mode=\"side\" position=\"start\" role=\"navigation\" class=\"example-sidenav\">\r\n\r\n\t\t\t\t\t<div fxLayout=\"column\" class=\"sidenav-normal\">\r\n            <center>\r\n              <button mat-fab color=\"primary\" (click)=\"sidenav2.toggle()\">\r\n                <mat-icon>menu</mat-icon>\r\n              </button>\r\n            </center><br />\r\n            <mat-accordion>\r\n              <mat-expansion-panel #panel1 (opened)=\"panelOpenState = true; this.changeHeaderTest('Brain Information');\"\r\n                                   (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Brain Information\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n                <br>\r\n                <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Series ID</mat-label>\r\n                  <input (change)=\"this.getBrainIDUpdated($event)\"matInput placeholder=\"E.g. 4240\">\r\n                </mat-form-field>\r\n                <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Section No</mat-label>\r\n                  <input (change)=\"this.emailUpdated($event)\" matInput placeholder=\"E.g. 25\">\r\n                </mat-form-field><p> </p>\r\n                <form>\r\n                  <mat-form-field appearance=\"fill\">\r\n                    <mat-label>Select Tracer</mat-label>\r\n                    <mat-select [(ngModel)]=\"selectedValue\" name=\"tracer\">\r\n                      <mat-option *ngFor=\"let tracer of tracers\" [value]=\"tracer.value\">\r\n                        {{tracer.viewValue}}\r\n                      </mat-option>\r\n                    </mat-select>\r\n                  </mat-form-field>\r\n                </form>\r\n                <!--\r\n                  <mat-slide-toggle\r\n                      color=\"primary\"\r\n                      (change)=\"this.onToggleTracer($event)\"\r\n                      class=\"example-margin\"\r\n                      [checked]=\"checked\"\r\n                      [disabled]=\"disabled\">\r\n                    Toggle Tracer\r\n                  </mat-slide-toggle>\r\n                -->          \r\n                <mat-card-actions>\r\n                  <button (click)=\"this.brainIDUpdated()\" color=\"primary\" mat-raised-button>Load Brain</button>\r\n                </mat-card-actions><p> </p>\r\n                <br>\r\n              </mat-expansion-panel><p></p>\r\n              <mat-expansion-panel #panel2 (opened)=\"panelOpenState = true; this.changeHeaderTest('Atlas');\"\r\n                                   (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Atlas\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n                <!--\r\n                  <button (click)=\"this.displayFeatures();\" mat-raised-button>\r\n                    <mat-icon>cloud_download</mat-icon>\r\n                  </button><p> </p>\r\n                -->\r\n                <div class=\"menu-overflow-hidden\" id=\"jstree_block\" style=\"height: calc(50% - 2px); margin-left: 10px;\">\r\n                  <div class=\"active-pink-3 active-pink-4 mb-4\">\r\n                      <mat-form-field appearance=\"outline\">\r\n                        <mat-label>Region Name</mat-label>\r\n                        <input class=\"form-control search-input\" (change)=\"this.Tree($event);\" matInput placeholder=\"E.g. Hypothalamus\">\r\n                      </mat-form-field>\r\n                   </div>\r\n                  <div style=\"white-space: nowrap; font-family: 'Big Shoulders Stencil Display', cursive; font-family: 'Roboto', sans-serif;\" id='atlas_info'></div>\r\n                </div>\r\n              </mat-expansion-panel><p></p>\r\n              <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Injection Region');\"\r\n                                   (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Injection Region\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n              </mat-expansion-panel><p></p>\r\n              <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Process Annotation');\"\r\n                                   (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Process Annotation\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n              </mat-expansion-panel><p></p>\r\n              <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Point Annotation');\"\r\n                                   (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Point Annotation\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n              </mat-expansion-panel><p></p>\r\n              \r\n                  <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Development Tools');\"\r\n                                      (closed)=\"panelOpenState = false; this.changeHeaderTest('Home');\">\r\n                    <mat-expansion-panel-header>\r\n                      <mat-panel-title>\r\n                        Development Tools\r\n                      </mat-panel-title>\r\n                    </mat-expansion-panel-header>\r\n                    <mat-accordion>\r\n                      <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Development Tool | REPL');\"\r\n                                      (closed)=\"panelOpenState = false; this.changeHeaderTest('Development Tool');\">\r\n                    <mat-expansion-panel-header>\r\n                      <mat-panel-title>\r\n                        REPL\r\n                      </mat-panel-title>\r\n                    </mat-expansion-panel-header>\r\n                    <mat-card-content>\r\n                      <form>\r\n                        <mat-form-field mat-form-field appearance=\"standard\">\r\n                          <input type=\"text\"\r\n                                id = \"replID\"\r\n                                placeholder=\"Command line\"\r\n                                aria-label=\"Number\"\r\n                                matInput\r\n                                [formControl]=\"myControl\"\r\n                                [matAutocomplete]=\"auto\">\r\n                          <mat-autocomplete #auto=\"matAutocomplete\">\r\n                            <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\r\n                              {{option}}\r\n                            </mat-option>\r\n                          </mat-autocomplete>\r\n                        </mat-form-field>\r\n                      </form>\r\n                      <mat-card-actions>\r\n                        <button color=\"primary\" (click)=\"this.REPL()\" mat-raised-button>Run Command</button>\r\n                      </mat-card-actions>\r\n                    </mat-card-content>\r\n                  </mat-expansion-panel><p> </p>\r\n\r\n                  <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Development Tool | Colour Intensity');\"\r\n                                (closed)=\"panelOpenState = false; this.changeHeaderTest('Development Tool');\">\r\n                    <mat-expansion-panel-header>\r\n                      <mat-panel-title>\r\n                        Colour Intensity\r\n                      </mat-panel-title>\r\n                    </mat-expansion-panel-header>\r\n                    <button (click)=\"resetToDefault()\" color=\"primary\" mat-raised-button>\r\n                      Reset to default\r\n                    </button><p> </p>\r\n                    Invert\r\n                    <mat-slider\r\n                      thumbLabel\r\n                      (change)=\"this.onInvertChange($event)\"\r\n                      min=\"1\"\r\n                      max=\"100\"></mat-slider><p> </p>\r\n                    Hue\r\n                    <mat-slider\r\n                      thumbLabel\r\n                      (change)=\"this.onHueChange($event)\"\r\n                      min=\"0\"\r\n                      max=\"360\"></mat-slider><p> </p>\r\n                    Saturation\r\n                    <mat-slider\r\n                      thumbLabel\r\n                      (change)=\"this.onSaturationChange($event)\"\r\n                      min=\"1\"\r\n                      max=\"100\"></mat-slider><p> </p>\r\n                  </mat-expansion-panel><p> </p>\r\n\r\n                  <mat-expansion-panel (opened)=\"panelOpenState = true; this.changeHeaderTest('Development Tool | Layers');\"\r\n                                   (closed)=\"panelOpenState = false; this.changeHeaderTest('Development Tool');\">\r\n                <mat-expansion-panel-header>\r\n                  <mat-panel-title>\r\n                    Layers\r\n                  </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n                <mat-slide-toggle\r\n                    color=\"primary\"\r\n                    (change)=\"this.onToggle($event)\"\r\n                    class=\"example-margin\"\r\n                    [checked]=\"checked\"\r\n                    [disabled]=\"disabled\">\r\n                  GeoJSON\r\n                </mat-slide-toggle><p> </p>\r\n              </mat-expansion-panel><p></p>\r\n                </mat-accordion>\r\n              </mat-expansion-panel><p> </p>\r\n\r\n\r\n              \r\n            </mat-accordion><p> </p>\r\n\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t</mat-sidenav>\r\n\t\t\t\t<mat-sidenav-content>\r\n\t\t\t\t\t<mat-toolbar role=\"toolbar\" class=\"main-header mat-elevation-z1 sticky-header\">\r\n              <button mat-icon-button class=\"example-icon\" (click)=\"sidenav2.toggle()\"  aria-label=\"Example icon-button with menu icon\">\r\n                <mat-icon>menu</mat-icon>\r\n              </button>\r\n              <span>Next Gen Viewer</span>&nbsp;&nbsp;\r\n              <mat-chip-list aria-label=\"Fish selection\">\r\n                <mat-chip>{{ this.headerTest }}</mat-chip>\r\n              </mat-chip-list>\r\n              <!--<button (click)=\"this.deleteDrawing()\" mat-raised-button>\r\n                <mat-icon>undo</mat-icon>\r\n              </button>&nbsp;\r\n              <button (click)=\"this.redoDrawing()\" mat-raised-button>\r\n                <mat-icon>redo</mat-icon>\r\n              </button>&nbsp;\r\n              <button color=\"accent\" (click)=\"sidenav1.toggle(); sidenav7.toggle()\" mat-raised-button>\r\n                Toggle <mat-icon>settings</mat-icon>\r\n              </button>&nbsp;-->\r\n              <span class=\"example-spacer\"></span>\r\n              <p>  </p>\r\n              <button mat-icon-button class=\"example-icon\" aria-label=\"Example icon-button with share icon\">\r\n              <mat-icon>share</mat-icon>\r\n              </button>\r\n\t\t\t\t\t</mat-toolbar>\r\n\r\n          <div class=\"example-sidenav-content\">\r\n            <div id=\"map\" class=\"map\"></div>\r\n          </div> \r\n\r\n\t\t\t\t</mat-sidenav-content>\r\n\t\t\t</mat-sidenav-container>\r\n\t\t</mat-sidenav-content>\r\n\t</mat-sidenav-container>\r\n</div>");
 
 /***/ }),
 
@@ -121,6 +121,9 @@ let AppComponent = class AppComponent {
         this.featureStack = [];
         this.lastol_uid = 0;
         this.last_size = 0;
+        this.addpixel = true;
+        this.category = null;
+        this.lastAtlasSize = 0;
         this.headerTest = "Home";
         this.selectedValue = 'nissl';
         this.tracers = [
@@ -147,7 +150,6 @@ let AppComponent = class AppComponent {
             //const coordinates = this.map.getLayers().item(1).getSource().getFeatures()[0].values_.geometry.flatCoordinates;
             //const type = this.map.getLayers().item(1).getSource().getFeatures()[0].getGeometry().getType();
             var writer = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_14__["default"]();
-            var geojsonStr = writer.writeFeatures(this.vector.getSource().getFeatures());
             /*const data = {
               'string': "geojsonStr",
               "geometry": {
@@ -155,15 +157,81 @@ let AppComponent = class AppComponent {
                 "coordinates": coordinates,
               },
             };*/
-            var outObj_atlas = {
-                imagename: this.brainID,
-                series_id: "" + this.PMDID,
-                section_id: "" + this.secNo,
-                section: "" + this.secNo,
-            };
-            //outObj_atlas.atlas = JSON.stringify(app.atlas);
-            var apifunName = '/saveatlas_status_wp/';
-            console.log("save works", geojsonStr, outObj_atlas);
+            var outObj_atlas;
+            console.log(this.category);
+            if (this.category == "Injection" && this.lastol_uid != 0) {
+                this.combine();
+                var feature = this.featureStack[0];
+                feature.setId(255);
+                console.log(feature, this.featureStack);
+                var geojsonStr = writer.writeFeatures([feature]);
+                outObj_atlas = {
+                    imagename: parseInt(this.PMDID.slice(3, 8)),
+                    series_id: "" + this.brainID,
+                    section_id: "" + this.secNo,
+                    section: "" + this.secNo,
+                    category: "injreg",
+                    tracername: "R",
+                    injection: undefined
+                };
+                outObj_atlas.injection = geojsonStr;
+                //http://3.235.171.52/webtools/webtools/seriesbrowser/deleteatlas_status_wp/?brain_id=2495&section=90
+                var apifunName = '/saveinjection_status_wp/';
+                console.log("save works", geojsonStr, outObj_atlas);
+                console.log("series", this.PMDID.slice(3, 8), this.brainID, this.secNo, outObj_atlas);
+            }
+            else if (this.category == "Atlas") {
+                outObj_atlas = {
+                    imagename: parseInt(this.PMDID.slice(3, 8)),
+                    series_id: "" + this.brainID,
+                    section_id: "" + this.secNo,
+                    section: "" + this.secNo,
+                    category: "atlas",
+                    atlas: undefined
+                };
+                outObj_atlas.atlas = JSON.stringify(geojsonStr);
+                //http://3.235.171.52/webtools/webtools/seriesbrowser/deleteatlas_status_wp/?brain_id=2495&section=90
+                var apifunName = '/saveatlas_status_wp/';
+                console.log("save works", geojsonStr, outObj_atlas);
+                console.log("series", this.PMDID.slice(3, 8), this.brainID, this.secNo);
+            }
+            var saveurl = "http://3.235.171.52/webtools/webtools/seriesbrowser/";
+            $.ajax({
+                url: saveurl + apifunName,
+                dataType: 'json',
+                async: false,
+                data: { 'msg': JSON.stringify(outObj_atlas) },
+                method: "POST",
+                success: function (response) {
+                    try {
+                        //response = JSON.parse(response);
+                        if (response.status == 0) {
+                            // resp = response.data;
+                            // dmsg = "Saved action : " + resp.state;
+                            var dmsg = "Success saving atlas";
+                            console.log(dmsg, response);
+                            //displayMessage(dmsg,true);
+                            //closeMessage(true);
+                            //app.atlas_loaded = false;
+                            //refreshOL();
+                        }
+                        else {
+                            //failMessage('Saving failed : ' + response.error);
+                            console.log("error in saving", response.error);
+                            return;
+                        }
+                    }
+                    catch (exc) {
+                        //failMessage('Exception : ' + exc.message);
+                        console.log('Exception in save : ' + exc.message);
+                        console.log(dmsg, response);
+                        return;
+                    }
+                },
+                fail: function (xhr, status, error) {
+                    //failMessage('Saving failed : ' + error);
+                }
+            });
             /*$(function () {
               // 6 create an instance when the DOM is ready
               function nodeExpand(node){
@@ -221,18 +289,43 @@ let AppComponent = class AppComponent {
                   }});
               })
             });*/
-            const db = firebase__WEBPACK_IMPORTED_MODULE_19__["default"].database().ref().child("vector").push(geojsonStr);
+            //const db = firebase.database().ref().child("vector").push(geojsonStr);
         };
         this.retrievePolygonsFromFirebase = () => {
             console.log("works here");
-            firebase__WEBPACK_IMPORTED_MODULE_19__["default"].database().ref('vector').once('value', snapshot => {
-                var items = [];
-                snapshot.forEach((child) => {
-                    items.push(child.val());
-                });
-                this.loadedFeature = items[items.length - 1];
-            }).then(() => {
-                this.loadPolygonsFromFirebase();
+            var reader = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_14__["default"]();
+            /*firebase.database().ref('vector').once('value', snapshot => {
+              var items = [];
+              snapshot.forEach((child) => {
+                items.push(child.val());
+              });
+              this.loadedFeature = items[items.length - 1];
+            }).then( () => {
+              this.loadPolygonsFromFirebase()
+            });*/
+            var flag = 0;
+            var saveurl = "http://3.235.171.52/webtools/webtools/seriesbrowser/";
+            var source = this.vector.getSource();
+            if (this.category == "Injection") {
+                saveurl = saveurl + '/getinjectionregion_status_wp/PMD' + parseInt(this.PMDID.slice(3, 8)) + '/' + this.secNo + '/' + "R";
+                flag = 1;
+            }
+            $.getJSON(saveurl, function (jsonresponse) {
+                console.log(jsonresponse);
+                try {
+                    console.log(this.category);
+                    if (flag) {
+                        var features = jsonresponse.data.features[0];
+                        console.log(features);
+                        features = reader.readFeatures(features);
+                        console.log(features);
+                        source.addFeature(features[0]);
+                        this.featureStack = [features[0]];
+                    }
+                }
+                catch (exec) {
+                    console.log("Error in Loading Injection region data ", exec.stack);
+                }
             });
         };
         this.loadPolygonsFromFirebase = () => {
@@ -283,6 +376,12 @@ let AppComponent = class AppComponent {
     changeHeaderTest(message) {
         this.headerTest = message;
         console.log(this.headerTest);
+        if (message == "Injection Region") {
+            this.category = "Injection";
+        }
+        if (message == "Atlas") {
+            this.category = "Atlas";
+        }
     }
     ngOnInit() {
         this.filteredOptions = this.myControl.valueChanges
@@ -460,6 +559,13 @@ let AppComponent = class AppComponent {
             type: "Polygon",
             style: this.styleErase,
         });
+        this.addpixelpoly = new ol_interaction_Draw__WEBPACK_IMPORTED_MODULE_11__["default"]({
+            source: this.vector.getSource(),
+            type: "Polygon",
+            style: this.styleAdd,
+            ol_uid: 1000,
+            name: "addRegion",
+        });
         this.defaultURL = 'http://braincircuits.org/cgi-bin/iipsrv.fcgi?FIF=/PMD2495/PMD2495%262494-F20-2016.02.26-23.11.41_PMD2495_3_0060.jp2&GAM=1&MINMAX=1:0,255&MINMAX=2:0,255&MINMAX=3:0,255&JTL={z},{tileIndex}';
         this.httpClient.get('http://mitradevel.cshl.org/webtools/seriesbrowser/getthumbnails/4958/').subscribe(res => {
             this.urlData = res;
@@ -504,6 +610,9 @@ let AppComponent = class AppComponent {
         this.vector.on("prerender", (event) => {
             this.setPolyStyle();
         });
+        this.modifyVector.on("prerender", (event) => {
+            this.editGeojson();
+        });
         /*this.addPolygon.on("drawstart",(event)=>{
           this.setPolyStyle();
         });
@@ -512,11 +621,42 @@ let AppComponent = class AppComponent {
     
         });*/
     }
+    editGeojson() {
+        var vectorM_sr = this.modifyVector.getSource();
+        var featuresM = vectorM_sr.getFeatures();
+        console.log("fea", featuresM.length, this.lastAtlasSize);
+        if (featuresM.length > this.lastAtlasSize) {
+            console.log("adding pixels");
+            var format = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_14__["default"]();
+            var turfpoly;
+            var last = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["polygon"]([]);
+            var count = 0;
+            console.log(this.treeRegion);
+            if (this.treeRegion != 0) {
+                var featureSelected = this.modifyVector.getSource().getFeatureById(this.treeRegion);
+                console.log(featureSelected, "selected");
+                if (this.addpixel == true) {
+                    var feature = vectorM_sr.getFeatureById(1000);
+                    console.log(feature, "last");
+                    feature = format.writeFeatureObject(feature);
+                    turfpoly = format.writeFeatureObject(featureSelected);
+                    console.log(feature, turfpoly);
+                    turfpoly = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["union"](turfpoly, feature);
+                    turfpoly = format.readFeatures(turfpoly)[0];
+                    console.log(turfpoly, "added", featureSelected);
+                    featureSelected.setGeometry(turfpoly.getGeometry());
+                    console.log("changed", featureSelected);
+                }
+            }
+            this.lastAtlasSize += 1;
+        }
+    }
     setPolyStyle() {
         var vector_sr = this.vector.getSource();
         var features = vector_sr.getFeatures();
         var bugFeature = new ol_Feature__WEBPACK_IMPORTED_MODULE_20__["default"];
         if (parseInt(features[features.length - 1].ol_uid) > this.lastol_uid == true) {
+            console.log(features);
             if (this.erasePolygon.getActive() == true && features[features.length - 1].getStyle() == null) { //check if style is already set
                 features[features.length - 1].setStyle(this.styleErase);
                 features[features.length - 1].set("name", "erase");
@@ -569,7 +709,7 @@ let AppComponent = class AppComponent {
         this.modifyVector.getSource().clear();
         if (event.checked == true) {
             this.lastChecked = true;
-            this.httpClient.get('http://mitradevel.cshl.org/webtools/seriesbrowser/getatlasgeojson/' + this.PMDID + '/00' + this.defaultGeoJSONSecNo + '/').subscribe(res => {
+            this.httpClient.get('http://3.235.171.52//webtools/webtools/seriesbrowser/getatlasgeojson_status_wp/' + this.PMDID + '/00' + this.defaultGeoJSONSecNo + '/').subscribe(res => {
                 var atlasstyle = new ol_style__WEBPACK_IMPORTED_MODULE_10__["Style"]({
                     fill: new ol_style__WEBPACK_IMPORTED_MODULE_10__["Fill"]({
                         color: 'rgba(255, 255, 255, 0)'
@@ -590,13 +730,17 @@ let AppComponent = class AppComponent {
                     })
                 });
                 console.log(this.defaultGeoJSONSecNo);
-                res = JSON.stringify(res);
+                console.log("res", res);
+                res = JSON.stringify(res["data"]);
                 var reader = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_14__["default"]();
+                var data = res;
                 const newGeoJson = reader.readFeatures(res);
                 var i;
+                console.log("new", newGeoJson);
                 for (i = 0; i < newGeoJson.length; i++) {
                     newGeoJson[i].setStyle(atlasstyle);
                     this.modifyVector.getSource().addFeature(newGeoJson[i]);
+                    this.lastAtlasSize += this.lastAtlasSize;
                 }
             });
             this.modifyVector.setVisible(true);
@@ -660,13 +804,22 @@ let AppComponent = class AppComponent {
         this.draw.setActive(false);
         this.erasePolygon.setActive(false);
         this.addPolygon.setActive(true);
+        this.addpixelpoly.setActive(false);
         this.map.addInteraction(this.addPolygon);
     }
     erasePolygons() {
         this.draw.setActive(false);
         this.addPolygon.setActive(false);
         this.erasePolygon.setActive(true);
+        this.addpixelpoly.setActive(false);
         this.map.addInteraction(this.erasePolygon);
+    }
+    addpixelpolyfun() {
+        this.draw.setActive(false);
+        this.addPolygon.setActive(false);
+        this.erasePolygon.setActive(false);
+        this.addpixelpoly.setActive(true);
+        this.map.addInteraction(this.addpixelpoly);
     }
     combine() {
         var vector_sr = this.vector.getSource();
@@ -731,6 +884,7 @@ let AppComponent = class AppComponent {
             this.lastol_uid = parseInt(polygon.ol_uid);
             this.last_size = 1;
             this.featureStack = [polygon];
+            console.log(this.featureStack);
             vector_sr.addFeature(polygon);
         }
         //console.log(vector_sr.getFeatures());
@@ -741,11 +895,16 @@ let AppComponent = class AppComponent {
         this.draw.setActive(true);
         this.addPolygon.setActive(false);
         this.erasePolygon.setActive(false);
+        this.addpixelpoly.setActive(false);
         this.draw = new ol_interaction_Draw__WEBPACK_IMPORTED_MODULE_11__["default"]({
             source: this.vector.getSource(),
             type: interactionType,
             freehand: true,
         });
+        if (interactionType == "Polygon") {
+            this.draw = this.draw;
+            this.draw.set("name", "addpixel");
+        }
         this.map.addInteraction(this.draw);
     }
     removeInteraction() {
@@ -753,6 +912,7 @@ let AppComponent = class AppComponent {
         this.addPolygon.setActive(false);
         this.erasePolygon.setActive(false);
         this.map.removeInteraction(this.draw);
+        this.addpixelpoly.setActive(false);
     }
     deleteDrawing() {
         try {
@@ -842,9 +1002,11 @@ let AppComponent = class AppComponent {
                 const newGeoJson = reader.readFeatures(res);
                 this.modifyVector.getSource().clear();
                 var i;
+                this.lastAtlasSize = 0;
                 for (i = 0; i < newGeoJson.length; i++) {
                     newGeoJson[i].setStyle(atlasstyle);
                     this.modifyVector.getSource().addFeature(newGeoJson[i]);
+                    this.lastAtlasSize += 1;
                 }
             });
             this.modifyVector.setVisible(true);
@@ -1047,9 +1209,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
 /* harmony import */ var _angular_material_slider__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/slider */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/slider.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
-/* harmony import */ var _angular_material_tree__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/tree */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tree.js");
-/* harmony import */ var _angular_material_chips__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/chips */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/chips.js");
-/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
+/* harmony import */ var _replservice_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./replservice.service */ "./src/app/replservice.service.ts");
+/* harmony import */ var _angular_material_tree__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/tree */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tree.js");
+/* harmony import */ var _angular_material_chips__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/chips */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/chips.js");
+/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
+
 
 
 
@@ -1099,11 +1263,11 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _angular_material_form_field__WEBPACK_IMPORTED_MODULE_17__["MatFormFieldModule"],
             _angular_material_slider__WEBPACK_IMPORTED_MODULE_18__["MatSliderModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpClientModule"],
-            _angular_material_tree__WEBPACK_IMPORTED_MODULE_20__["MatTreeModule"],
-            _angular_material_chips__WEBPACK_IMPORTED_MODULE_21__["MatChipsModule"],
-            _angular_material_select__WEBPACK_IMPORTED_MODULE_22__["MatSelectModule"]
+            _angular_material_tree__WEBPACK_IMPORTED_MODULE_21__["MatTreeModule"],
+            _angular_material_chips__WEBPACK_IMPORTED_MODULE_22__["MatChipsModule"],
+            _angular_material_select__WEBPACK_IMPORTED_MODULE_23__["MatSelectModule"]
         ],
-        providers: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]],
+        providers: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _replservice_service__WEBPACK_IMPORTED_MODULE_20__["ReplserviceService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
     })
 ], AppModule);
