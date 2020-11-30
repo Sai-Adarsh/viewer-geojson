@@ -323,8 +323,11 @@ let AppComponent = class AppComponent {
                         console.log(features, jsonresponse);
                         features = reader.readFeatures(features);
                         console.log(features);
+                        features[0].setStyle(this.styleAdd);
                         source.addFeature(features[0]);
+                        console.log(source.getFeatures());
                         this.featureStack = [features[0]];
+                        this.vector.setSource(source);
                     }
                 }
                 catch (exec) {
@@ -614,40 +617,12 @@ let AppComponent = class AppComponent {
         this.vector.on("prerender", (event) => {
             this.setPolyStyle();
         });
-        this.modifyVector.on("prerender", (event) => {
-            //this.editGeojson();
-        });
-        /*this.addPolygon.on("drawstart",(event)=>{
-          this.setPolyStyle();
-        });
-        this.addPolygon.on("drawend",(event)=>{
-          this.setPolyStyle();
-    
-        });*/
-    }
-    editGeojson() {
-        var vectorM_sr = this.modifyVector.getSource();
-        var featuresM = vectorM_sr.getFeatures();
-        //console.log("fea",featuresM.length,this.lastAtlasSize);
-        if (featuresM.length > this.lastAtlasSize) {
-            console.log("adding pixels");
-            var format = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_14__["default"]();
-            var turfpoly;
-            var last = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["polygon"]([]);
-            var count = 0;
-            console.log(this.treeRegion);
-            if (this.treeRegion != 0) {
-                var featureSelected = this.modifyVector.getSource().getFeatureById(this.treeRegion);
-                //console.log(featureSelected,"selected");
-                if (false) { var feature; }
-            }
-            this.lastAtlasSize += 1;
-        }
     }
     setPolyStyle() {
         var vector_sr = this.vector.getSource();
         var features = vector_sr.getFeatures();
         var bugFeature = new ol_Feature__WEBPACK_IMPORTED_MODULE_20__["default"];
+        console.log(features, "features");
         if (parseInt(features[features.length - 1].ol_uid) > this.lastol_uid == true) { //console.log(features,this.addpixelpoly.getActive(),"yuy")
             if (false) { var feature, featureSelected, last, turfpoly, format, featuresM, vectorM_sr; }
             if (this.erasePolygon.getActive() == true && features[features.length - 1].getStyle() == null) { //check if style is already set
@@ -723,7 +698,8 @@ let AppComponent = class AppComponent {
                     })
                 });
                 console.log(this.defaultGeoJSONSecNo);
-                console.log("res", res, JSON.parse(res["data"]));
+                console.log("res", res);
+                //console.log(JSON.parse(res["data"]))
                 res = res["data"];
                 var reader = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_14__["default"]();
                 var data = res;
@@ -836,9 +812,12 @@ let AppComponent = class AppComponent {
             if (count > 0) {
                 if (features[i].get('name') == "add") {
                     var uid = features[i].ol_uid;
+                    console.log(uid, "uid");
+                    console.log(vector_sr.getFeatures(), "feas", polygon);
                     vector_sr.removeFeature(vector_sr.getFeatureByUid(uid));
                     //console.log(isIntersected," check");
                     polygon = _turf_turf__WEBPACK_IMPORTED_MODULE_2__["union"](polygon, turfpoly);
+                    console.log(polygon, "p");
                 }
                 else if (count > 0 && features[i].get('name') == "erase") {
                     var uid = features[i].ol_uid;
@@ -868,6 +847,7 @@ let AppComponent = class AppComponent {
                 var uid = features[i].ol_uid;
                 vector_sr.removeFeature(vector_sr.getFeatureByUid(uid));
                 polygon = format.writeFeatureObject(features[i]);
+                console.log(polygon, "p");
                 count = count + 1;
             }
         }
