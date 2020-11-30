@@ -533,9 +533,9 @@ module.exports = content.locals || {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\MSI\next-gen-viewer\node_modules\@angular\material\prebuilt-themes\pink-bluegrey.css */"./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css");
-__webpack_require__(/*! C:\Users\MSI\next-gen-viewer\node_modules\jstree\dist\themes\default\style.min.css */"./node_modules/jstree/dist/themes/default/style.min.css");
-module.exports = __webpack_require__(/*! C:\Users\MSI\next-gen-viewer\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! C:\Users\MSI\Desktop\next-gen-viewer\node_modules\@angular\material\prebuilt-themes\pink-bluegrey.css */"./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css");
+__webpack_require__(/*! C:\Users\MSI\Desktop\next-gen-viewer\node_modules\jstree\dist\themes\default\style.min.css */"./node_modules/jstree/dist/themes/default/style.min.css");
+module.exports = __webpack_require__(/*! C:\Users\MSI\Desktop\next-gen-viewer\src\styles.css */"./src/styles.css");
 
 
 /***/ })
